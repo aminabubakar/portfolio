@@ -136,6 +136,19 @@
     .testimonial-link { display: inline-block; margin-top: 20px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; border-bottom: 1px solid var(--gray-200); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
     .testimonial-link:hover { color: var(--black); border-color: var(--black); }
 
+    /* DEEPER DIVE */
+    #deeper-dive { background: var(--black); color: var(--white); }
+    #deeper-dive .section-label { color: rgba(255,255,255,0.4); }
+    #deeper-dive .section-title { color: var(--white); margin-bottom: 40px; }
+    .dive-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); }
+    .dive-card { background: var(--black); padding: 44px 40px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: var(--white); transition: background 0.2s; }
+    .dive-card:hover { background: #1a1a1a; }
+    .dive-card-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+    .dive-card-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; line-height: 1.25; }
+    .dive-card-desc { font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+    .dive-card-arrow { font-size: 1.1rem; color: rgba(255,255,255,0.3); margin-top: auto; transition: color 0.2s; }
+    .dive-card:hover .dive-card-arrow { color: var(--white); }
+
     /* CONTACT */
     #contact { background: var(--black); color: var(--white); text-align: center; }
     #contact .section-title { color: var(--white); }
@@ -174,6 +187,8 @@
       .gallery-grid .wide { grid-column: span 2; }
       .testimonial-grid { grid-template-columns: 1fr; }
       .testimonial-card { padding: 32px 24px; }
+      .dive-grid { grid-template-columns: 1fr; }
+      .dive-card { padding: 36px 28px; }
     }
   </style>
 </head>
@@ -191,7 +206,7 @@
     <li><a href="#certifications">Certifications</a></li>
     <li><a href="#gallery">Moments</a></li>
     <li><a href="goals.html">Goals</a></li>
-    <li><a href="evaluation.html">Evaluation</a></li>
+    <li><a href="evaluation.html">Reflections</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -437,6 +452,28 @@
         <div class="testimonial-role">MYP Coordinator, ISNS</div>
         <a class="testimonial-link" href="documents/testimonial-ernald-boyd.pdf" target="_blank">Learn more</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEEPER DIVE -->
+<section id="deeper-dive">
+  <div class="section-inner">
+    <p class="section-label">Go Deeper</p>
+    <h2 class="section-title">Beyond the Highlights</h2>
+    <div class="dive-grid">
+      <a class="dive-card" href="goals.html">
+        <span class="dive-card-label">Annual Goals</span>
+        <span class="dive-card-title">Goals</span>
+        <span class="dive-card-desc">Five years of professional and personal goals — from inquiry-based teaching to presenting at the IB Global Conference and pursuing a doctorate.</span>
+        <span class="dive-card-arrow">→</span>
+      </a>
+      <a class="dive-card" href="evaluation.html">
+        <span class="dive-card-label">Growth &amp; Practice</span>
+        <span class="dive-card-title">Reflections</span>
+        <span class="dive-card-desc">Annual evaluations using the IB Standards &amp; Practices Framework — documenting what worked, what grew, and what continues to drive my teaching.</span>
+        <span class="dive-card-arrow">→</span>
+      </a>
     </div>
   </div>
 </section>
