@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluation — Amin Abu Bakar</title>
+  <meta name="description" content="Annual S&P Framework evaluations documenting Amin Abu Bakar's professional growth, strengths, and progress as an IB educator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0d0d0d; --white: #ffffff;
+      --gray-100: #f5f5f5; --gray-200: #e8e8e8;
+      --gray-400: #999; --gray-600: #555; --gray-800: #222;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --max-w: 860px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 60px; }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--black); }
+
+    .page-header { padding: 140px 24px 80px; background: var(--black); color: var(--white); text-align: center; }
+    .page-header .eyebrow { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+    .page-header h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; margin-bottom: 20px; }
+    .page-header p { font-size: 1rem; color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto; }
+
+    .content { max-width: var(--max-w); margin: 0 auto; padding: 80px 24px; }
+
+    .framework-intro {
+      font-size: 0.93rem;
+      color: var(--gray-600);
+      line-height: 1.75;
+      padding: 28px 32px;
+      background: var(--gray-100);
+      border-left: 3px solid var(--black);
+      margin-bottom: 60px;
+    }
+
+    .eval-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1px;
+      background: var(--gray-200);
+      border: 1px solid var(--gray-200);
+      margin-bottom: 60px;
+    }
+
+    .eval-card {
+      background: var(--white);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .eval-card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(20%);
+      transition: filter 0.3s;
+    }
+
+    .eval-card:hover .eval-card-img { filter: grayscale(0%); }
+
+    .eval-card-body { padding: 28px 32px; flex: 1; display: flex; flex-direction: column; }
+
+    .eval-year {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--black);
+      color: var(--white);
+      display: inline-block;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+
+    .eval-title {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .eval-date { font-size: 0.78rem; color: var(--gray-400); margin-bottom: 20px; }
+
+    .eval-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 2px;
+      margin-top: auto;
+      width: fit-content;
+      transition: opacity 0.2s;
+    }
+    .eval-link:hover { opacity: 0.6; }
+    .eval-link::after { content: '↗'; font-size: 0.75rem; }
+
+    footer { background: var(--black); border-top: 1px solid rgba(255,255,255,0.08); text-align: center; padding: 24px; font-size: 0.75rem; color: #444; }
+
+    @media (max-width: 720px) {
+      nav { padding: 0 20px; }
+      .nav-links { gap: 16px; }
+      .nav-links li:nth-child(n+5) { display: none; }
+      .eval-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Amin Abu Bakar</a>
+  <ul class="nav-links">
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#certifications">Certifications</a></li>
+    <li><a href="index.html#gallery">Gallery</a></li>
+    <li><a href="goals.html">Goals</a></li>
+    <li><a href="evaluation.html" class="active">Evaluation</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <p class="eyebrow">S&amp;P Framework</p>
+  <h1>Evaluation</h1>
+  <p>Annual reflective evaluations documenting growth, challenges, and professional milestones using the Strengths & Progress Framework.</p>
+</div>
+
+<div class="content">
+
+  <div class="framework-intro">
+    The <strong>S&amp;P (Strengths & Progress) Framework</strong> is used to reflect on yearly performance — identifying what worked well, areas for continued growth, and evidence of professional impact. Each entry below covers one academic year.
+  </div>
+
+  <div class="eval-grid">
+
+    <div class="eval-card">
+      <img class="eval-card-img"
+        src="images/eval-2025-2026.jpg"
+        alt="2025–2026 Evaluation" loading="lazy" />
+      <div class="eval-card-body">
+        <span class="eval-year">2025 – 2026</span>
+        <div class="eval-title">Annual Evaluation</div>
+        <div class="eval-date">Published: November 26, 2025</div>
+        <a class="eval-link" href="https://aminurrashidab.wixsite.com/aminabubakar/post/2025-2026" target="_blank">Read Evaluation</a>
+      </div>
+    </div>
+
+    <div class="eval-card">
+      <img class="eval-card-img"
+        src="images/eval-2024-2025.jpg"
+        alt="2024–2025 Evaluation" loading="lazy" />
+      <div class="eval-card-body">
+        <span class="eval-year">2024 – 2025</span>
+        <div class="eval-title">Annual Evaluation</div>
+        <div class="eval-date">Published: April 28, 2025</div>
+        <a class="eval-link" href="https://aminurrashidab.wixsite.com/aminabubakar/post/2024-2025" target="_blank">Read Evaluation</a>
+      </div>
+    </div>
+
+    <div class="eval-card">
+      <img class="eval-card-img"
+        src="images/eval-2023-2024.png"
+        alt="2023–2024 Evaluation" loading="lazy" />
+      <div class="eval-card-body">
+        <span class="eval-year">2023 – 2024</span>
+        <div class="eval-title">Annual Evaluation</div>
+        <div class="eval-date">Published: February 26, 2025</div>
+        <a class="eval-link" href="https://aminurrashidab.wixsite.com/aminabubakar/post/2023-2024" target="_blank">Read Evaluation</a>
+      </div>
+    </div>
+
+    <div class="eval-card">
+      <img class="eval-card-img"
+        src="images/eval-2022-2023.png"
+        alt="2022–2023 Evaluation" loading="lazy" />
+      <div class="eval-card-body">
+        <span class="eval-year">2022 – 2023</span>
+        <div class="eval-title">Annual Evaluation</div>
+        <div class="eval-date">Published: February 26, 2025</div>
+        <a class="eval-link" href="https://aminurrashidab.wixsite.com/aminabubakar/post/2022-2023" target="_blank">Read Evaluation</a>
+      </div>
+    </div>
+
+    <div class="eval-card">
+      <img class="eval-card-img"
+        src="images/eval-2021-2022.png"
+        alt="2021–2022 Evaluation" loading="lazy" />
+      <div class="eval-card-body">
+        <span class="eval-year">2021 – 2022</span>
+        <div class="eval-title">Annual Evaluation</div>
+        <div class="eval-date">Published: February 26, 2025</div>
+        <a class="eval-link" href="https://aminurrashidab.wixsite.com/aminabubakar/post/2021-2022" target="_blank">Read Evaluation</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>&copy; 2026 Amin Abu Bakar. All rights reserved.</footer>
+</body>
+</html>

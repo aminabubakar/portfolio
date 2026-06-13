@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amin Abu Bakar — Educator & IB Leader</title>
+  <meta name="description" content="Amin Abu Bakar – IB Programme & Workshop Leader, Physics & Extended Essay Examiner, and Physics Educator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0d0d0d; --white: #ffffff;
+      --gray-100: #f5f5f5; --gray-200: #e8e8e8;
+      --gray-400: #999; --gray-600: #555; --gray-800: #222;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --max-w: 900px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 60px; }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--black); }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+        url('images/hero-ib-workshop.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      color: var(--white);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 100px 24px 80px;
+    }
+    .hero-eyebrow { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 24px; }
+    .hero-name { font-family: var(--serif); font-size: clamp(3rem, 8vw, 6rem); font-weight: 700; line-height: 1.08; margin-bottom: 28px; }
+    .hero-divider { width: 40px; height: 1px; background: rgba(255,255,255,0.4); margin: 0 auto 28px; }
+    .hero-title { font-size: clamp(0.95rem, 2vw, 1.1rem); font-weight: 300; color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 48px; line-height: 1.65; }
+    .hero-title strong { color: var(--white); font-weight: 500; }
+    .hero-cta { display: inline-block; padding: 14px 36px; border: 1px solid rgba(255,255,255,0.4); color: var(--white); text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s, border-color 0.2s; }
+    .hero-cta:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
+
+    /* SECTIONS */
+    section { padding: 90px 24px; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 12px; }
+    .section-title { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.2; margin-bottom: 56px; }
+
+    /* EXPERIENCE */
+    #experience { background: var(--white); }
+    .timeline-item { display: grid; grid-template-columns: 160px 1fr; gap: 0 40px; padding: 32px 0; border-top: 1px solid var(--gray-200); }
+    .timeline-item:last-child { border-bottom: 1px solid var(--gray-200); }
+    .timeline-date { font-size: 0.8rem; font-weight: 500; color: var(--gray-400); }
+    .timeline-org { font-size: 0.8rem; color: var(--gray-600); margin-top: 4px; }
+    .timeline-role { font-size: 1.05rem; font-weight: 600; }
+
+    /* EDUCATION */
+    #education { background: var(--gray-100); }
+    .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
+    .edu-card { background: var(--white); padding: 36px 32px; }
+    .edu-badge { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); border: 1px solid var(--gray-200); padding: 3px 10px; margin-bottom: 20px; }
+    .edu-degree { font-size: 1rem; font-weight: 600; line-height: 1.4; margin-bottom: 8px; }
+    .edu-school { font-size: 0.88rem; color: var(--gray-600); }
+
+    /* CERTIFICATIONS */
+    #certifications { background: var(--white); }
+    .cert-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 48px 64px; }
+    .cert-group-title { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--black); border-bottom: 2px solid var(--black); padding-bottom: 10px; margin-bottom: 20px; }
+    .cert-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .cert-list li { font-size: 0.88rem; color: var(--gray-600); padding-left: 16px; position: relative; line-height: 1.4; }
+    .cert-list li::before { content: '—'; position: absolute; left: 0; color: var(--gray-400); font-size: 0.7rem; top: 3px; }
+    .cert-list a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--gray-200); transition: border-color 0.2s, color 0.2s; }
+    .cert-list a:hover { color: var(--black); border-color: var(--black); }
+
+    /* GALLERY */
+    #gallery { background: var(--black); padding: 90px 24px; }
+    #gallery .section-label { color: #666; }
+    #gallery .section-title { color: var(--white); margin-bottom: 40px; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 220px;
+      gap: 6px;
+    }
+    .gallery-grid .wide { grid-column: span 2; }
+    .gallery-item { overflow: hidden; display: block; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(30%); transition: filter 0.4s, transform 0.4s; }
+    .gallery-item:hover img { filter: grayscale(0%); transform: scale(1.04); }
+
+    /* TESTIMONIALS */
+    #testimonials { background: var(--gray-100); }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
+    .testimonial-card { background: var(--white); padding: 44px 40px; }
+    .testimonial-quote { font-family: var(--serif); font-size: 1.02rem; line-height: 1.7; color: var(--gray-800); margin-bottom: 28px; font-style: italic; }
+    .testimonial-author { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; color: var(--black); text-transform: uppercase; }
+    .testimonial-role { font-size: 0.78rem; color: var(--gray-400); margin-top: 4px; }
+
+    /* CONTACT */
+    #contact { background: var(--black); color: var(--white); text-align: center; }
+    #contact .section-title { color: var(--white); }
+    .contact-links { display: flex; gap: 48px; justify-content: center; flex-wrap: wrap; }
+    .contact-link { display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; }
+    .contact-link-label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray-400); }
+    .contact-link-value { font-size: 0.95rem; color: var(--white); border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1px; transition: border-color 0.2s; }
+    .contact-link:hover .contact-link-value { border-color: rgba(255,255,255,0.6); }
+    .contact-location { font-size: 0.82rem; color: var(--gray-400); margin-top: 48px; }
+
+    footer { background: var(--black); border-top: 1px solid rgba(255,255,255,0.08); text-align: center; padding: 24px; font-size: 0.75rem; color: #444; }
+
+    @media (max-width: 720px) {
+      nav { padding: 0 20px; }
+      .nav-links { gap: 16px; }
+      .nav-links li:nth-child(n+5) { display: none; }
+      .timeline-item { grid-template-columns: 1fr; gap: 6px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+      .gallery-grid .wide { grid-column: span 2; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .testimonial-card { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Amin Abu Bakar</a>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="goals.html">Goals</a></li>
+    <li><a href="evaluation.html">Evaluation</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <p class="hero-eyebrow">Portfolio</p>
+  <h1 class="hero-name">Amin Abu Bakar</h1>
+  <div class="hero-divider"></div>
+  <p class="hero-title">
+    <strong>IB Programme & Workshop Leader</strong> · Physics & Extended Essay Examiner ·
+    Educator with 20 years of experience across Singapore, Indonesia, and China.
+    Passionate about inquiry-based learning and the integration of AI in education.
+  </p>
+  <a class="hero-cta" href="#experience">View My Work</a>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <p class="section-label">Career</p>
+    <h2 class="section-title">Professional History</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div><div class="timeline-date">2024 – Present</div><div class="timeline-org">International Baccalaureate</div></div>
+        <div class="timeline-role">IB Programme & Workshop Leader</div>
+      </div>
+      <div class="timeline-item">
+        <div><div class="timeline-date">2021 – Present</div><div class="timeline-org">International Baccalaureate</div></div>
+        <div class="timeline-role">IB DP Physics & World Studies Extended Essay Examiner</div>
+      </div>
+      <div class="timeline-item">
+        <div><div class="timeline-date">2018 – Present</div><div class="timeline-org">International School of Nanshan Shenzhen</div></div>
+        <div class="timeline-role">MYP Science and DP Physics Teacher</div>
+      </div>
+      <div class="timeline-item">
+        <div><div class="timeline-date">2014 – 2015</div><div class="timeline-org">Anglo Chinese School, Jakarta</div></div>
+        <div class="timeline-role">IB DP Theory of Knowledge Teacher</div>
+      </div>
+      <div class="timeline-item">
+        <div><div class="timeline-date">2011 – 2015</div><div class="timeline-org">Anglo Chinese School, Jakarta</div></div>
+        <div class="timeline-role">IGCSE and DP Physics Teacher</div>
+      </div>
+      <div class="timeline-item">
+        <div><div class="timeline-date">2006 – 2011</div><div class="timeline-org">Ministry of Education, Singapore</div></div>
+        <div class="timeline-role">Mathematics and Science Teacher</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-inner">
+    <p class="section-label">Academic Background</p>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <span class="edu-badge">B.Sc.</span>
+        <div class="edu-degree">Bachelor of Science<br>Major: Physics · Minor: Chemistry</div>
+        <div class="edu-school">Nanyang Technological University</div>
+      </div>
+      <div class="edu-card">
+        <span class="edu-badge">M.Ed.</span>
+        <div class="edu-degree">Master of Education in Advanced Teaching</div>
+        <div class="edu-school">University of the People</div>
+      </div>
+      <div class="edu-card">
+        <span class="edu-badge">Ed.D.</span>
+        <div class="edu-degree">Doctor of Education in Educational Research</div>
+        <div class="edu-school">University College Fairview</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-inner">
+    <p class="section-label">Qualifications</p>
+    <h2 class="section-title">Certifications</h2>
+    <div class="cert-groups">
+      <div>
+        <div class="cert-group-title">IB Certifications</div>
+        <ul class="cert-list">
+          <li><a href="documents/ib-dp-physics-cat1.pdf" target="_blank">DP Physics — Category 1</a></li>
+          <li><a href="documents/ib-dp-physics-cat2.pdf" target="_blank">DP Physics — Category 2</a></li>
+          <li><a href="https://drive.google.com/file/d/14eoopBIty3li_rTq3vAN9tqr5jB4VtJ6/view" target="_blank">DP Physics — Category 2 (Curriculum Update)</a></li>
+          <li><a href="documents/ib-dp-tok-cat1.pdf" target="_blank">DP Theory of Knowledge — Category 1</a></li>
+          <li><a href="documents/ib-myp-science-cat1.pdf" target="_blank">MYP Science: Implementing the Curriculum — Cat. 1</a></li>
+          <li><a href="documents/ib-dp-assessment-learning-cat3.pdf" target="_blank">Assessment for Learning in the DP — Cat. 3</a></li>
+          <li><a href="documents/ib-dp-physics-ia-cat3.pdf" target="_blank">DP Physics: Focus on Internal Assessment — Cat. 3</a></li>
+          <li><a href="documents/ib-dp-academic-honesty-cat3.pdf" target="_blank">DP Academic Honesty in Practice — Cat. 3</a></li>
+          <li><a href="documents/ib-dp-tok-subject-teachers-cat3.pdf" target="_blank">DP TOK for Subject Teachers — Cat. 3</a></li>
+          <li><a href="documents/ib-dp-core-cat3.pdf" target="_blank">The DP Core — Cat. 3</a></li>
+          <li><a href="documents/ib-dp-physics-marking-ia-cat3.pdf" target="_blank">Marking your Physics IA — Cat. 3</a></li>
+          <li><a href="documents/ib-myp-inquiry-cat3.pdf" target="_blank">Inquiry in the MYP — Cat. 3</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="cert-group-title">Technology & AI</div>
+        <ul class="cert-list">
+          <li><a href="documents/tech-gemini-certified-faculty.pdf" target="_blank">Gemini Certified Faculty</a></li>
+          <li><a href="documents/tech-gemini-certified-educator.pdf" target="_blank">Gemini Certified Educator</a></li>
+          <li><a href="documents/tech-google-educator-level2.pdf" target="_blank">Google Certified Educator Level 2</a></li>
+          <li><a href="documents/tech-google-educator-level1.pdf" target="_blank">Google Certified Educator Level 1</a></li>
+          <li><a href="documents/tech-apple-teacher.pdf" target="_blank">Apple Teacher</a></li>
+          <li><a href="https://www.coursera.org/account/accomplishments/certificate/T6JDBEYMM494" target="_blank">Coursera: Generative AI for Everyone</a></li>
+          <li><a href="https://certificates.gse.upenn.edu/06f92fa6-ecbb-445d-969d-81be7d59b8ae" target="_blank">Penn GSE: Introducing AI into the Classroom</a></li>
+        </ul>
+        <div class="cert-group-title" style="margin-top:40px;">Professional Development</div>
+        <ul class="cert-list">
+          <li><a href="https://drive.google.com/file/d/1UTXq8nta4Hozy_8aDRfSm7wq2j4r1L/view" target="_blank">Harvard GSE: Certificate in Media & Technology for Education</a></li>
+          <li><a href="https://drive.google.com/file/d/1NzxvkFo25b5ndaJMGgt31WxAAZW5XacU/view" target="_blank">Harvard GSE: Developing Strategies for Online Teaching</a></li>
+          <li><a href="https://drive.google.com/file/d/1bVs1mx6Hg6kBlpsTEsEcowX_9opPIIP-/view" target="_blank">Harvard GSE: Online Teaching and Learning in Action</a></li>
+          <li><a href="https://drive.google.com/file/d/10Qes3H0oKe792ByW-2NhZbRw8JiW7cYa/view" target="_blank">Harvard GSE: Screen-Time Savvy & Digital Media Literacy</a></li>
+          <li><a href="https://drive.google.com/file/d/1FwfQwqbrVQuR6dnfXp0SIfC_P3YxdnYA/view" target="_blank">NSTA: Assessing Three-Dimensional Learning</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-inner">
+    <p class="section-label">In the Field</p>
+    <h2 class="section-title">Gallery</h2>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+    <div class="gallery-grid">
+      <a class="gallery-item wide" href="images/gallery-students-lab-collaborative.jpg" target="_blank">
+        <img src="images/gallery-students-lab-collaborative.jpg" alt="Amin Abu Bakar" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-students-data-analysis.jpg" target="_blank">
+        <img src="images/gallery-students-data-analysis.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-lab-overview.jpg" target="_blank">
+        <img src="images/gallery-lab-overview.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-teachers-pd-workshop.jpg" target="_blank">
+        <img src="images/gallery-teachers-pd-workshop.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-students-sensor-experiment.jpg" target="_blank">
+        <img src="images/gallery-students-sensor-experiment.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item wide" href="images/gallery-students-physics-measurement.jpg" target="_blank">
+        <img src="images/gallery-students-physics-measurement.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-students-equations-paper.jpg" target="_blank">
+        <img src="images/gallery-students-equations-paper.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-students-physics-presentation.jpg" target="_blank">
+        <img src="images/gallery-students-physics-presentation.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-students-lab-experiment.jpg" target="_blank">
+        <img src="images/gallery-students-lab-experiment.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-students-physics-lab-review.jpg" target="_blank">
+        <img src="images/gallery-students-physics-lab-review.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-students-lab-laptops.jpg" target="_blank">
+        <img src="images/gallery-students-lab-laptops.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-students-collaborative-work.jpg" target="_blank">
+        <img src="images/gallery-students-collaborative-work.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-student-tablet-lab.jpg" target="_blank">
+        <img src="images/gallery-student-tablet-lab.jpg" alt="" loading="lazy" />
+      </a>
+      <a class="gallery-item" href="images/gallery-students-wave-experiment.jpg" target="_blank">
+        <img src="images/gallery-students-wave-experiment.jpg" alt="" loading="lazy" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-inner">
+    <p class="section-label">What Others Say</p>
+    <h2 class="section-title">Testimonials</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"The students are clearly working from the routines that you've established. This was a fun, engaging, and productive lesson. Loved that the students corrected others if they slipped into Mandarin. There was some great positive reinforcement that you gave students during the lesson."</p>
+        <div class="testimonial-author">Chelsea Donaldson</div>
+        <div class="testimonial-role">High School Principal, ISNS</div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"I heard 'this is awesome' and some students wanted to bring their data on their service learning trip to continue their investigation. The students were able to enjoy experiential learning and relate it to a topic they had already learned, reinforcing their learning in DP Physics."</p>
+        <div class="testimonial-author">Brian Kelly</div>
+        <div class="testimonial-role">Former High School Principal, ISNS</div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"Amin Bin Abu Bakar has been a great addition to our staff at ISNS. I can vouch for his content knowledge, professionalism, strength of character, and reputation amongst the staff as a friendly and caring individual."</p>
+        <div class="testimonial-author">Patrick Boekhoud</div>
+        <div class="testimonial-role">Former High School Principal, ISNS</div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"You have a great classroom environment that you create for your students to openly engage with the content. It is clear that you have included a fair amount of rigor in the course through the activity in this class."</p>
+        <div class="testimonial-author">Ernald Boyd</div>
+        <div class="testimonial-role">MYP Coordinator, ISNS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-label" style="color:#666;">Get In Touch</p>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:aminurrashid.ab@gmail.com">
+        <span class="contact-link-label">Email</span>
+        <span class="contact-link-value">aminurrashid.ab@gmail.com</span>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/aminabubakar/" target="_blank">
+        <span class="contact-link-label">LinkedIn</span>
+        <span class="contact-link-value">linkedin.com/in/aminabubakar</span>
+      </a>
+    </div>
+    <p class="contact-location">Shenzhen, Guangdong, China</p>
+  </div>
+</section>
+
+<footer>&copy; 2026 Amin Abu Bakar. All rights reserved.</footer>
+</body>
+</html>
