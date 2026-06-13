@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluation 2022–2023 — Amin Abu Bakar</title>
+  <meta name="description" content="S&P Framework annual evaluation for 2022–2023, documenting Amin Abu Bakar's professional growth as an IB educator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0d0d0d; --white: #ffffff;
+      --gray-100: #f5f5f5; --gray-200: #e8e8e8;
+      --gray-400: #999; --gray-600: #555; --gray-800: #222;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --max-w: 760px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 60px; }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--black); }
+    .nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; margin-left: auto; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .page-header { padding: 120px 24px 60px; background: var(--black); color: var(--white); }
+    .page-header .back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 28px; transition: color 0.2s; }
+    .page-header .back:hover { color: rgba(255,255,255,0.8); }
+    .page-header .back::before { content: '←'; font-size: 0.85rem; }
+    .page-header .eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
+    .page-header h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 12px; }
+    .page-header .meta { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+
+    .content { max-width: var(--max-w); margin: 0 auto; padding: 72px 24px 100px; }
+
+    .section { margin-bottom: 64px; }
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--black);
+      color: var(--white);
+      display: inline-block;
+      padding: 4px 12px;
+      margin-bottom: 32px;
+    }
+
+    .entry { margin-bottom: 40px; }
+    .entry-standard {
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      font-style: italic;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .entry-photo { margin: 20px 0; }
+    .entry-photo img { width: 100%; max-width: 600px; height: auto; display: block; border: 1px solid var(--gray-200); }
+    .entry-caption { font-size: 0.8rem; color: var(--gray-600); font-style: italic; line-height: 1.55; margin-top: 10px; max-width: 600px; }
+
+    .nav-eval { display: flex; justify-content: space-between; align-items: center; padding: 32px 0; border-top: 1px solid var(--gray-200); margin-top: 48px; }
+    .nav-eval a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--black); text-decoration: none; border-bottom: 1px solid var(--black); padding-bottom: 2px; transition: opacity 0.2s; }
+    .nav-eval a:hover { opacity: 0.5; }
+
+    footer { background: var(--black); text-align: center; padding: 24px; font-size: 0.75rem; color: #444; }
+
+    @media (max-width: 720px) {
+      nav { padding: 0 16px; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px; left: 0; right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--gray-200);
+        flex-direction: column;
+        padding: 12px 20px 20px;
+        gap: 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--gray-200); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-links a { display: block; padding: 14px 0; font-size: 0.82rem; letter-spacing: 0.1em; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Amin Abu Bakar</a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#certifications">Certifications</a></li>
+    <li><a href="index.html#gallery">Gallery</a></li>
+    <li><a href="goals.html">Goals</a></li>
+    <li><a href="evaluation.html" class="active">Evaluation</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <a class="back" href="evaluation.html">All Evaluations</a>
+  <div class="eyebrow">S&amp;P Framework</div>
+  <h1>2022 – 2023</h1>
+  <div class="meta">Published: February 26, 2025 &nbsp;·&nbsp; Updated: February 11, 2026</div>
+</div>
+
+<div class="content">
+
+  <!-- PURPOSE -->
+  <div class="section">
+    <div class="section-label">Purpose</div>
+
+    <div class="entry">
+      <div class="entry-standard">The school develops a mission, philosophy and/or strategy that includes a holistic approach to education that goes beyond academic development and encourages awareness beyond the individual and the immediate community. (0101-01-0200)</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_ce946cda91244fe4b8065d77d24e53d9~mv2.png" alt="Pearl River Conference Soccer Tournament" loading="lazy" />
+        <div class="entry-caption">The HS Boys and Girls Soccer Teams participated in the Pearl River Conference Tournament in Dongguan. The girls came in 2nd and won the sportsmanship award. The sportsmanship award highlights ISNS girls' approach to the game — it's not just about winning, but winning with grace and humility.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEARNING -->
+  <div class="section">
+    <div class="section-label">Learning</div>
+
+    <div class="entry">
+      <div class="entry-standard">Teachers use collaborative planning and reflection to address the elements of an IB education. (0401-02-0400)</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_1215e5b47cad4e0aa2c7d8d1fd4f1b6f~mv2.png" alt="CanGlory ChatGPT workshop at CISB" loading="lazy" />
+        <div class="entry-caption">I attended a CanGlory ChatGPT workshop at the Canadian International School of Beijing — our sister school. During this workshop, we discussed the use of AI in the classroom. It was an opportunity for us to reflect on how the use of AI can be incorporated into teaching and learning. While AI is not new, the rise of ChatGPT has made the public more aware of the development of AI. There are pushbacks from some quarters, and we need to maximize its potential while minimizing its downsides.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div class="nav-eval">
+    <a href="evaluation-2023-2024.html">← 2023–2024</a>
+    <a href="evaluation-2021-2022.html">2021–2022 →</a>
+  </div>
+
+</div>
+
+<footer>&copy; 2026 Amin Abu Bakar. All rights reserved.</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluation 2021–2022 — Amin Abu Bakar</title>
+  <meta name="description" content="S&P Framework annual evaluation for 2021–2022, documenting Amin Abu Bakar's professional growth as an IB educator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0d0d0d; --white: #ffffff;
+      --gray-100: #f5f5f5; --gray-200: #e8e8e8;
+      --gray-400: #999; --gray-600: #555; --gray-800: #222;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --max-w: 760px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 60px; }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--black); }
+    .nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; margin-left: auto; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .page-header { padding: 120px 24px 60px; background: var(--black); color: var(--white); }
+    .page-header .back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 28px; transition: color 0.2s; }
+    .page-header .back:hover { color: rgba(255,255,255,0.8); }
+    .page-header .back::before { content: '←'; font-size: 0.85rem; }
+    .page-header .eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
+    .page-header h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 12px; }
+    .page-header .meta { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+
+    .content { max-width: var(--max-w); margin: 0 auto; padding: 72px 24px 100px; }
+
+    .section { margin-bottom: 64px; }
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--black);
+      color: var(--white);
+      display: inline-block;
+      padding: 4px 12px;
+      margin-bottom: 32px;
+    }
+
+    .entry { margin-bottom: 40px; }
+    .entry-standard {
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      font-style: italic;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .entry-photo { margin: 20px 0; }
+    .entry-photo img { width: 100%; max-width: 600px; height: auto; display: block; border: 1px solid var(--gray-200); }
+    .entry-caption { font-size: 0.8rem; color: var(--gray-600); font-style: italic; line-height: 1.55; margin-top: 10px; max-width: 600px; }
+
+    .reflection {
+      font-size: 0.95rem;
+      color: var(--gray-800);
+      line-height: 1.8;
+    }
+    .reflection p { margin-bottom: 20px; }
+    .reflection .ref-heading {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin: 32px 0 16px;
+      color: var(--black);
+    }
+    .reflection .ref-item {
+      font-size: 0.82rem;
+      color: var(--gray-600);
+      margin-bottom: 10px;
+    }
+    .reflection .ref-item a { color: var(--black); }
+
+    .download-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      padding: 12px 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    .nav-eval { display: flex; justify-content: space-between; align-items: center; padding: 32px 0; border-top: 1px solid var(--gray-200); margin-top: 48px; }
+    .nav-eval a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--black); text-decoration: none; border-bottom: 1px solid var(--black); padding-bottom: 2px; transition: opacity 0.2s; }
+    .nav-eval a:hover { opacity: 0.5; }
+
+    footer { background: var(--black); text-align: center; padding: 24px; font-size: 0.75rem; color: #444; }
+
+    @media (max-width: 720px) {
+      nav { padding: 0 16px; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px; left: 0; right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--gray-200);
+        flex-direction: column;
+        padding: 12px 20px 20px;
+        gap: 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--gray-200); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-links a { display: block; padding: 14px 0; font-size: 0.82rem; letter-spacing: 0.1em; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Amin Abu Bakar</a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#certifications">Certifications</a></li>
+    <li><a href="index.html#gallery">Gallery</a></li>
+    <li><a href="goals.html">Goals</a></li>
+    <li><a href="evaluation.html" class="active">Evaluation</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <a class="back" href="evaluation.html">All Evaluations</a>
+  <div class="eyebrow">S&amp;P Framework</div>
+  <h1>2021 – 2022</h1>
+  <div class="meta">Published: February 26, 2025 &nbsp;·&nbsp; Updated: February 11, 2026</div>
+</div>
+
+<div class="content">
+
+  <!-- PURPOSE -->
+  <div class="section">
+    <div class="section-label">Purpose</div>
+
+    <div class="entry">
+      <div class="entry-standard">The school community fosters internationally minded people who embody all attributes of the IB learner profile. (0101-03)</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_63bdefa8620845809bf372506542b7e9~mv2.png" alt="Students on a Week Without Walls trip" loading="lazy" />
+        <div class="entry-caption">Students on a Week Without Walls trip where they get to demonstrate various IB Learner Profile attributes.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENVIRONMENT -->
+  <div class="section">
+    <div class="section-label">Environment</div>
+
+    <div class="entry">
+      <div class="entry-standard">The school provides adequate resources and facilities in accordance with programme documentation. (0202-01-0100)</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_23b94645d42644e283d9d583e4fb11c4~mv2.png" alt="Students in inquiry-based science lab activity" loading="lazy" />
+        <div class="entry-caption">Students engaging in an inquiry-based activity in a well-equipped science lab.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-standard">The school demonstrates in its systems, processes and policies attention to the social, emotional, and physical well-being of its students and teachers. (0202-03-0200)</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_c5006b6c53f74b528906f4e926b6c698~mv2.png" alt="Girls HS soccer team ACAMIS and SISAC" loading="lazy" />
+        <div class="entry-caption">Celebrating the Girls HS soccer team's success in the ACAMIS and SISAC competitions.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CULTURE -->
+  <div class="section">
+    <div class="section-label">Culture</div>
+
+    <div class="entry">
+      <div class="entry-standard">The school implements and reviews an academic integrity policy that makes the school's philosophy clear and is aligned with IB guidelines. (0301-03-0100)</div>
+      <div class="entry-photo" style="margin-bottom: 0;">
+        <div class="download-box">📄 Google Scholar Guide (PPTX) — document available on request</div>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--gray-600); margin-top: 14px;">I came up with a Google Scholar guide to emphasize the importance of using scholarly articles and citing them correctly in students' work.</p>
+    </div>
+  </div>
+
+  <!-- LEARNING -->
+  <div class="section">
+    <div class="section-label">Learning</div>
+
+    <div class="entry">
+      <div class="entry-standard">The school provides collaborative planning time for teachers to incorporate IB philosophy into the curriculum. (0401-01-0400)</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_5f99f7ce93f441b1a70879bacdc5066e~mv2.png" alt="TOK Category 3 Workshop" loading="lazy" />
+        <div class="entry-caption">Teachers attending an in-school TOK Category 3 Workshop. We discussed how TOK can be incorporated into our subject disciplines.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-standard">Students and teachers engage in learning experiences that are designed to include opportunities for students to collaborate. (0402-03-0100)</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_17408c942269492899b27525341ae74c~mv2.png" alt="Students working collaboratively" loading="lazy" />
+        <div class="entry-caption">Students working collaboratively and demonstrating IB ATL skills and Learner Profile attributes.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REFLECTIVE EDUCATOR -->
+  <div class="section">
+    <div class="section-label">Reflective Educator</div>
+
+    <div class="reflection">
+      <p>I am an International Baccalaureate (IB) middle year program (MYP) science and diploma program (DP) physics teacher. The students in my school would have been introduced to the basics of the scientific method and scientific inquiry when they are in Grade 6. For this reflection, I will only discuss the scientific inquiry. As noted by Gauch (2013), the scientific method (TSM) is frequently misunderstood as "a fixed sequence of steps" (p. 5). The steps he was referring to are (1) observation, (2) research, (3) hypothesis, (4) experiment, (5) analysis, and (6) result. Harwood (2004) pointed out that in practice scientific inquiry might not follow a linear process. However, variation of TSM provides a platform from which scientists can base their work on.</p>
+
+      <p>So is instructional design a science? There are instances where instructional design can be considered a science. An investigation or inquiry within science requires a dependent and independent variable. Thus the study of instructional design can be a science when there is a dependent variable to be measured (for example, an activity chosen during the design process) and an independent variable (the outcome after implementing the activity in the classroom). The next part is when things get a little unclear. In natural sciences, besides identifying the independent and dependent variables, one also needs to be aware of the need for controlled variables. On top of that, the experiment's result should be readily repeated when conducted under controlled conditions. However, when dealing with individuals, there are so many uncontrolled variables involved that the results can often vary when the study is repeated.</p>
+
+      <p>I will use my own experience as an example. I am currently teaching two Grade 9 science classes. If Instructional Design is purely a science, I would expect similar results when carrying out my lessons in an identical manner. The reality is when I conduct lessons in a similar manner for both classes, I can get different results. This is due to the uncontrolled variables mentioned earlier. Many factors affect learning in the classroom, such as students' motivation, cultural, social, and preferred learning methods. This is where I feel that instructional design crosses the realm of science into the realm of art.</p>
+
+      <p>I am bad at drawing. Even when I'm given the same drawing material given to an artist, my drawing's output will almost definitely be worse than that of the artist. A teacher is like an artist as well. The teacher's knowledge and experiences would enable him or her to shape the outcome of the lesson. When I was a beginning teacher, I tended to follow a lesson plan to a T. If my class deviates from the original plan, I would consider my lesson a failure. Even after identifying the "best teaching methods for specific learners in a specific context, attempting to obtain a specific goal" (IEEE, 2001, p.1, as cited in Botturi, 2003), I now find myself adapting to my student's needs during the lesson itself. If I were to use the artist analogy still, then the science of Instructional Design is like the drawing tools given to the artist; how the teacher uses the science of Instructional Design is akin to how an artist would use his or her tools.</p>
+
+      <p>In conclusion, I agree with Richey et al. (2017) when they said that Instructional Design is "the science and art of creating detailed specifications for the development, evaluation, and maintenance of situations which facilitate learning and performance" (p. 3). Teachers should use fundamentally sound institutional design principles that are based on the scientific method as put forth by Seel et al. (2017) and use their professional judgment to make necessary tweaks to best suit the needs of their classes.</p>
+
+      <div class="ref-heading">References</div>
+
+      <div class="ref-item">Botturi, L. (2003). Instructional Design &amp; Learning Technology Standard. <em>ICeF – Quaderni dell'Istituto, 9.</em> <a href="https://doc.rero.ch/record/5154/files/1_icefq09.pdf" target="_blank" rel="noopener">doc.rero.ch/record/5154/files/1_icefq09.pdf ↗</a></div>
+
+      <div class="ref-item">Gauch, J. H. G. (2013). <em>Scientific method in brief.</em> ProQuest Ebook Central.</div>
+
+      <div class="ref-item">Harwood, W. S. (2004). A new model for inquiry: Is the scientific method dead? <em>Journal of College Science Teaching, 33</em>(7), 29–33. <a href="https://www.researchgate.net/profile/William-Harwood-2/publication/281033422_A_New_Model_for_Inquiry/links/5981f13da6fdccb9101fb289/A-New-Model-for-Inquiry.pdf" target="_blank" rel="noopener">View on ResearchGate ↗</a></div>
+
+      <div class="ref-item">Richey, R. C., Klein, J. D., &amp; Tracey, M. W. (2010). <em>The instructional design knowledge base: Theory, research, and practice.</em> ProQuest Ebook Central.</div>
+
+      <div class="ref-item">Seel, N. M., Lehmann, T., Blumschein, P., &amp; Podolskiy, O. A. (2017). <em>Instructional design for learning: Theoretical foundations.</em> ProQuest Ebook Central.</div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div class="nav-eval">
+    <a href="evaluation-2022-2023.html">← 2022–2023</a>
+    <a href="evaluation.html">All Evaluations →</a>
+  </div>
+
+</div>
+
+<footer>&copy; 2026 Amin Abu Bakar. All rights reserved.</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+</body>
+</html>

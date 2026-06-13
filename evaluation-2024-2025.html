@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluation 2024–2025 — Amin Abu Bakar</title>
+  <meta name="description" content="S&P Framework annual evaluation for 2024–2025, documenting Amin Abu Bakar's professional growth as an IB educator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0d0d0d; --white: #ffffff;
+      --gray-100: #f5f5f5; --gray-200: #e8e8e8;
+      --gray-400: #999; --gray-600: #555; --gray-800: #222;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --max-w: 760px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 60px; }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--black); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--black); }
+    .nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; margin-left: auto; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .page-header { padding: 120px 24px 60px; background: var(--black); color: var(--white); }
+    .page-header .back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 28px; transition: color 0.2s; }
+    .page-header .back:hover { color: rgba(255,255,255,0.8); }
+    .page-header .back::before { content: '←'; font-size: 0.85rem; }
+    .page-header .eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
+    .page-header h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 12px; }
+    .page-header .meta { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+
+    .content { max-width: var(--max-w); margin: 0 auto; padding: 72px 24px 100px; }
+
+    .section { margin-bottom: 64px; }
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--black);
+      color: var(--white);
+      display: inline-block;
+      padding: 4px 12px;
+      margin-bottom: 32px;
+    }
+
+    .entry { margin-bottom: 40px; }
+    .entry-standard {
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      font-style: italic;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+    .entry-body { font-size: 0.97rem; color: var(--gray-800); line-height: 1.75; }
+
+    .entry-photo { margin: 20px 0; }
+    .entry-photo img { width: 100%; max-width: 600px; height: auto; display: block; border: 1px solid var(--gray-200); }
+    .entry-caption { font-size: 0.8rem; color: var(--gray-600); font-style: italic; line-height: 1.55; margin-top: 10px; max-width: 600px; }
+
+    .iste-heading {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 40px 0 8px;
+      padding-top: 32px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .iste-sub {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--black);
+      margin: 28px 0 6px;
+    }
+    .iste-desc {
+      font-size: 0.82rem;
+      color: var(--gray-600);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .download-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      padding: 12px 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    .nav-eval { display: flex; justify-content: space-between; align-items: center; padding: 32px 0; border-top: 1px solid var(--gray-200); margin-top: 48px; }
+    .nav-eval a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--black); text-decoration: none; border-bottom: 1px solid var(--black); padding-bottom: 2px; transition: opacity 0.2s; }
+    .nav-eval a:hover { opacity: 0.5; }
+
+    footer { background: var(--black); text-align: center; padding: 24px; font-size: 0.75rem; color: #444; }
+
+    @media (max-width: 720px) {
+      nav { padding: 0 16px; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px; left: 0; right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--gray-200);
+        flex-direction: column;
+        padding: 12px 20px 20px;
+        gap: 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--gray-200); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-links a { display: block; padding: 14px 0; font-size: 0.82rem; letter-spacing: 0.1em; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="index.html">Amin Abu Bakar</a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#certifications">Certifications</a></li>
+    <li><a href="index.html#gallery">Gallery</a></li>
+    <li><a href="goals.html">Goals</a></li>
+    <li><a href="evaluation.html" class="active">Evaluation</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <a class="back" href="evaluation.html">All Evaluations</a>
+  <div class="eyebrow">S&amp;P Framework</div>
+  <h1>2024 – 2025</h1>
+  <div class="meta">Published: April 28, 2025 &nbsp;·&nbsp; Updated: February 11, 2026</div>
+</div>
+
+<div class="content">
+
+  <!-- LEARNING -->
+  <div class="section">
+    <div class="section-label">Learning</div>
+
+    <div class="entry">
+      <div class="entry-standard">The school ensures that all teachers and pedagogical leadership teams have access to relevant communities that support the development of the programme(s). (0401-03-0200)</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_5717f65339bb46eb8ea11f77e5b852cd~mv2.jpeg" alt="IB Programme Leader Training" loading="lazy" />
+        <div class="entry-caption">Over the past few weeks, I participated in the International Baccalaureate Programme Leader Training. The experience gave me a deeper appreciation for the ways schools bring the IB philosophy to life and how evaluators can support schools in their growth journeys. I'm grateful for the learning and look forward to contributing meaningfully to the IB community.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-standard">Teachers remove barriers to learning to enable every student to develop, pursue and achieve challenging personal learning goals. (0403-05)</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_c7d8aed7cb9546aebaa2a7d45236a579~mv2.jpeg" alt="Removing barriers to learning" loading="lazy" />
+        <div class="entry-caption">This year, I've been focusing on how to better remove barriers to learning in my classroom, ensuring every student can pursue meaningful and challenging personal goals. Small changes in how we differentiate, scaffold, and encourage independence can make a powerful difference.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PURPOSE -->
+  <div class="section">
+    <div class="section-label">Purpose</div>
+
+    <div class="entry">
+      <div class="entry-standard">The school community fosters internationally minded people who embody all attributes of the IB learner profile. (0101-03)</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_022fa9488d1d4c8b972ad4a3d45868e0~mv2.jpg" alt="Week Without Walls Cambodia" loading="lazy" />
+        <div class="entry-caption">During our Week Without Walls trip to Cambodia, I watched our students bring the IB Learner Profile to life — showing curiosity, courage, empathy, and reflection at every turn. Experiences like these go beyond academics; they shape internationally minded young people ready to make a positive difference in the world.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CULTURE -->
+  <div class="section">
+    <div class="section-label">Culture</div>
+
+    <div class="entry">
+      <div class="entry-standard">The school promotes open communication based on understanding and respect. (0202-03-0400)</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_a60f2c7739a440f9a4a3ad445b0206bc~mv2.jpeg" alt="ISNS HS Girls Soccer Team" loading="lazy" />
+        <div class="entry-caption">This season with the ISNS High School Girls' Soccer Team was about more than just trophies — it was about building a culture grounded in fun, camaraderie, and grit. Watching our players grow together, support one another, and honor their essential agreements has been a true reflection of the IB spirit of collaboration, open communication, and mutual respect.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ISTE STANDARDS -->
+  <div class="section">
+    <div class="iste-heading">ISTE Standards</div>
+
+    <div class="entry">
+      <div class="iste-sub">2.1 Learners</div>
+      <div class="iste-desc">Educators continually improve their practice by learning from and with others and exploring proven and promising practices that leverage technology to improve student learning.</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_ffb2db6d8b6848179c583d7d18902830~mv2.jpeg" alt="Future of Learning Hong Kong" loading="lazy" />
+        <div class="entry-caption">One goal I had attending Future of Learning Hong Kong was to better understand how AI could transform learning experiences. Engaging with educators across different contexts expanded my thinking and fueled new ideas I'm excited to bring back to my students. Growth happens when we step into new conversations.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="iste-sub">4.1 Change Agent</div>
+      <div class="iste-desc">Coaches inspire educators and leaders to use technology to create equitable and ongoing access to high-quality learning.</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_9527636b22ee4246ba594e4411d14b3a~mv2.jpeg" alt="EdTechGZ 2025" loading="lazy" />
+        <div class="entry-caption">Grateful for the chance to share my session at EdTechGZ 2025! We explored how revisiting assessment feedback through Generative AI can transform learning experiences. The conversations and connections reaffirmed how powerful it is when educators come together to drive positive change.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="iste-sub">4.2 Connected Learner</div>
+      <div class="iste-desc">Coaches model the ISTE Standards for Students and the ISTE Standards for Educators and identify ways to improve their coaching practice.</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_8c0b7efe0b554d8797165ce1460b6661~mv2.png" alt="21CLHK Conference Hong Kong" loading="lazy" />
+        <div class="entry-caption">I had the opportunity to attend the 21CLHK Conference in Hong Kong, focusing on the evolving role of AI in education. Staying connected to emerging innovations reminds me how important it is for educators to be lifelong learners. Grateful for the chance to engage with leading thinkers and bring new ideas back to my students and community.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="iste-sub">4.5 Collaborator</div>
+      <div class="iste-desc">Coaches establish productive relationships with educators in order to improve instructional practice and learning outcomes.</div>
+      <div class="entry-photo">
+        <img src="https://static.wixstatic.com/media/139bf5_ea126f6a51c14272937e98aab8c0c278~mv2.png" alt="Sharing Moodle practices with AKD group of schools" loading="lazy" />
+        <div class="entry-caption">I had the opportunity to share how I use Moodle to support learning and assessment with educators across the AKD group of schools. It was a great chance to reflect on how digital platforms can create more personalized, student-centered learning environments. I believe meaningful change happens when we collaborate and learn from one another.</div>
+      </div>
+    </div>
+
+    <div class="entry" style="margin-top: 32px;">
+      <div class="iste-sub">ISTE Rubric</div>
+      <div class="download-box">📄 ISTE Standards Rubrics — document available on request</div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div class="nav-eval">
+    <a href="evaluation-2025-2026.html">← 2025–2026</a>
+    <a href="evaluation-2023-2024.html">2023–2024 →</a>
+  </div>
+
+</div>
+
+<footer>&copy; 2026 Amin Abu Bakar. All rights reserved.</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+</body>
+</html>
