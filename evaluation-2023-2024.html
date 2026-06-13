@@ -73,9 +73,11 @@
     .external-links p { font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
     .external-links a { display: block; font-size: 0.82rem; color: var(--black); margin-bottom: 6px; word-break: break-all; }
 
-    .nav-eval { display: flex; justify-content: space-between; align-items: center; padding: 32px 0; border-top: 1px solid var(--gray-200); margin-top: 48px; }
-    .nav-eval a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--black); text-decoration: none; border-bottom: 1px solid var(--black); padding-bottom: 2px; transition: opacity 0.2s; }
-    .nav-eval a:hover { opacity: 0.5; }
+    .year-nav { background: var(--gray-100); border-bottom: 1px solid var(--gray-200); }
+    .year-nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; display: flex; gap: 0; }
+    .year-nav a { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); text-decoration: none; padding: 14px 20px; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; white-space: nowrap; }
+    .year-nav a:hover { color: var(--black); }
+    .year-nav a.active { color: var(--black); border-bottom-color: var(--black); }
 
     footer { background: var(--black); text-align: center; padding: 24px; font-size: 0.75rem; color: #444; }
 
@@ -124,6 +126,17 @@
   <div class="meta">Published: February 26, 2025 &nbsp;·&nbsp; Updated: February 11, 2026</div>
 </div>
 
+<div class="year-nav">
+  <div class="year-nav-inner">
+    <a href="evaluation.html">All Years</a>
+    <a href="evaluation-2021-2022.html">2021–22</a>
+    <a href="evaluation-2022-2023.html">2022–23</a>
+    <a href="evaluation-2023-2024.html" class="active">2023–24</a>
+    <a href="evaluation-2024-2025.html">2024–25</a>
+    <a href="evaluation-2025-2026.html">2025–26</a>
+  </div>
+</div>
+
 <div class="content">
 
   <!-- LEARNING -->
@@ -166,11 +179,6 @@
     </div>
   </div>
 
-  <!-- NAV -->
-  <div class="nav-eval">
-    <a href="evaluation-2024-2025.html">← 2024–2025</a>
-    <a href="evaluation-2022-2023.html">2022–2023 →</a>
-  </div>
 
 </div>
 
