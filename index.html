@@ -105,6 +105,16 @@
     .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 60%, transparent 100%); display: flex; align-items: flex-end; padding: 18px 20px; opacity: 0; transition: opacity 0.35s; pointer-events: none; }
     .gallery-overlay span { color: var(--white); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.03em; line-height: 1.3; }
     .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-item-video { cursor: pointer; }
+    .gallery-play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.2s; pointer-events: none; }
+    .gallery-item-video:hover .gallery-play-btn { background: rgba(255,255,255,1); transform: translate(-50%, -50%) scale(1.1); }
+    .gallery-play-btn svg { width: 20px; height: 20px; margin-left: 3px; fill: #0d0d0d; }
+    .video-modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; }
+    .video-modal.open { display: flex; }
+    .video-modal-inner { position: relative; width: 90%; max-width: 900px; aspect-ratio: 16/9; }
+    .video-modal-inner iframe { width: 100%; height: 100%; border: none; }
+    .video-modal-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: var(--white); font-size: 1.8rem; cursor: pointer; line-height: 1; padding: 4px 8px; opacity: 0.7; transition: opacity 0.2s; }
+    .video-modal-close:hover { opacity: 1; }
 
     /* TESTIMONIALS */
     #testimonials { background: var(--gray-100); }
@@ -317,10 +327,11 @@
   </div>
   <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
     <div class="gallery-grid">
-      <a class="gallery-item wide" href="images/gallery-students-lab-collaborative.jpg" target="_blank">
-        <img src="images/gallery-students-lab-collaborative.jpg" alt="Collaborative lab work" loading="lazy" />
+      <div class="gallery-item wide gallery-item-video" onclick="openVideoModal('V4QKjEP3M68')">
+        <img src="https://img.youtube.com/vi/V4QKjEP3M68/maxresdefault.jpg" alt="Fire in the Hole — Investigating Projectile Motion" loading="lazy" />
         <div class="gallery-overlay"><span>Fire in the Hole — Investigating Projectile Motion</span></div>
-      </a>
+        <div class="gallery-play-btn"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
       <a class="gallery-item" href="images/gallery-students-data-analysis.jpg" target="_blank">
         <img src="images/gallery-students-data-analysis.jpg" alt="Student data analysis" loading="lazy" />
         <div class="gallery-overlay"><span>Authentic Learning Experience — Students process and analyse data they've personally gathered to make sense of their observations.</span></div>
@@ -432,7 +443,29 @@
 
 <footer>&copy; 2026 Amin Abu Bakar. All rights reserved.</footer>
 
+<div class="video-modal" id="videoModal" onclick="handleModalClick(event)">
+  <div class="video-modal-inner">
+    <button class="video-modal-close" onclick="closeVideoModal()">&times;</button>
+    <iframe id="videoFrame" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+  </div>
+</div>
+
 <script>
+  function openVideoModal(videoId) {
+    document.getElementById('videoFrame').src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+    document.getElementById('videoModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVideoModal() {
+    document.getElementById('videoFrame').src = '';
+    document.getElementById('videoModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function handleModalClick(e) {
+    if (e.target === document.getElementById('videoModal')) closeVideoModal();
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeVideoModal(); });
+
   const toggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
   toggle.addEventListener('click', () => {
