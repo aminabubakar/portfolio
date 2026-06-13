@@ -60,10 +60,11 @@
 
     /* EXPERIENCE */
     #experience { background: var(--white); }
-    .timeline-item { display: grid; grid-template-columns: 160px 1fr; gap: 0 40px; padding: 32px 0; border-top: 1px solid var(--gray-200); }
+    .timeline-item { padding: 32px 0; border-top: 1px solid var(--gray-200); }
     .timeline-item:last-child { border-bottom: 1px solid var(--gray-200); }
-    .timeline-date { font-size: 0.8rem; font-weight: 500; color: var(--gray-400); }
-    .timeline-org { font-size: 0.8rem; color: var(--gray-600); margin-top: 4px; }
+    .timeline-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+    .timeline-org { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-600); }
+    .timeline-date { font-size: 0.78rem; font-weight: 500; color: var(--gray-400); white-space: nowrap; margin-left: 16px; }
     .timeline-roles { display: flex; flex-direction: column; gap: 10px; }
     .timeline-role { font-size: 1.05rem; font-weight: 600; }
     .timeline-subyear { font-size: 0.75rem; font-weight: 400; color: var(--gray-400); margin-left: 8px; }
@@ -149,7 +150,6 @@
       .nav-links a { display: block; padding: 14px 0; font-size: 0.82rem; letter-spacing: 0.1em; }
     }
     @media (max-width: 480px) {
-      .timeline-item { grid-template-columns: 1fr; gap: 6px; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
       .gallery-grid .wide { grid-column: span 2; }
       .testimonial-grid { grid-template-columns: 1fr; }
@@ -195,25 +195,37 @@
     <h2 class="section-title">Professional History</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <div><div class="timeline-date">2021 – Present</div><div class="timeline-org">International Baccalaureate</div></div>
+        <div class="timeline-header">
+          <div class="timeline-org">International Baccalaureate</div>
+          <div class="timeline-date">2021 – Present</div>
+        </div>
         <div class="timeline-roles">
           <div class="timeline-role">IB Programme & Workshop Leader <span class="timeline-subyear">2024 – Present</span></div>
           <div class="timeline-role">IB DP Physics & World Studies Extended Essay Examiner <span class="timeline-subyear">2021 – Present</span></div>
         </div>
       </div>
       <div class="timeline-item">
-        <div><div class="timeline-date">2018 – Present</div><div class="timeline-org">International School of Nanshan Shenzhen</div></div>
+        <div class="timeline-header">
+          <div class="timeline-org">International School of Nanshan Shenzhen</div>
+          <div class="timeline-date">2018 – Present</div>
+        </div>
         <div class="timeline-role">MYP Science and DP Physics Teacher</div>
       </div>
       <div class="timeline-item">
-        <div><div class="timeline-date">2011 – 2015</div><div class="timeline-org">Anglo Chinese School, Jakarta</div></div>
+        <div class="timeline-header">
+          <div class="timeline-org">Anglo Chinese School, Jakarta</div>
+          <div class="timeline-date">2011 – 2015</div>
+        </div>
         <div class="timeline-roles">
           <div class="timeline-role">IB DP Theory of Knowledge Teacher <span class="timeline-subyear">2014 – 2015</span></div>
           <div class="timeline-role">IGCSE and DP Physics Teacher <span class="timeline-subyear">2011 – 2015</span></div>
         </div>
       </div>
       <div class="timeline-item">
-        <div><div class="timeline-date">2006 – 2011</div><div class="timeline-org">Ministry of Education, Singapore</div></div>
+        <div class="timeline-header">
+          <div class="timeline-org">Ministry of Education, Singapore</div>
+          <div class="timeline-date">2006 – 2011</div>
+        </div>
         <div class="timeline-role">Mathematics and Science Teacher</div>
       </div>
     </div>
