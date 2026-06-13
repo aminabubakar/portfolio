@@ -58,6 +58,12 @@
     .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 12px; }
     .section-title { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.2; margin-bottom: 56px; }
 
+    /* ABOUT */
+    #about { background: var(--gray-100); }
+    .philosophy-quote { font-family: var(--serif); font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-style: italic; line-height: 1.65; color: var(--gray-800); border-left: 3px solid var(--black); padding: 16px 0 16px 28px; margin-bottom: 44px; max-width: 720px; }
+    .about-text { display: flex; flex-direction: column; gap: 20px; max-width: 720px; }
+    .about-text p { font-size: 1rem; color: var(--gray-600); line-height: 1.85; }
+
     /* EXPERIENCE */
     #experience { background: var(--white); }
     .timeline-item { padding: 32px 0; border-top: 1px solid var(--gray-200); }
@@ -77,6 +83,7 @@
     .edu-degree { font-size: 1rem; font-weight: 600; line-height: 1.4; margin-bottom: 8px; }
     .edu-school { font-size: 0.88rem; color: var(--gray-600); }
     .edu-year { font-size: 0.78rem; color: var(--gray-400); margin-top: 8px; }
+    .edu-inprogress { display: inline-block; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--black); padding: 2px 7px; margin-left: 6px; vertical-align: middle; }
 
     /* CERTIFICATIONS */
     #certifications { background: var(--white); }
@@ -87,6 +94,9 @@
     .cert-list li::before { content: '—'; position: absolute; left: 0; color: var(--gray-400); font-size: 0.7rem; top: 3px; }
     .cert-list a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--gray-200); transition: border-color 0.2s, color 0.2s; }
     .cert-list a:hover { color: var(--black); border-color: var(--black); }
+    .cert-list li.cert-featured { color: var(--black); font-weight: 600; }
+    .cert-list li.cert-featured::before { content: '★'; color: var(--black); font-size: 0.62rem; top: 4px; }
+    .cert-list li.cert-featured a { color: var(--black); border-color: var(--gray-400); }
 
     /* GALLERY */
     #gallery { background: var(--black); padding: 90px 24px; }
@@ -175,6 +185,7 @@
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links">
+    <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#certifications">Certifications</a></li>
@@ -190,12 +201,20 @@
   <p class="hero-eyebrow">Portfolio</p>
   <h1 class="hero-name">Amin Abu Bakar</h1>
   <div class="hero-divider"></div>
-  <p class="hero-title">
-    <strong>Apple Distinguished Educator</strong> · IB Programme &amp; Workshop Leader · Physics &amp; Extended Essay Examiner · MYP Science &amp; DP Physics Teacher ·
-    Educator with 20 years of experience across Singapore, Indonesia, and China.
-    Passionate about inquiry-based learning and the integration of AI in education.
-  </p>
+  <p class="hero-title">Helping students understand physics through inquiry and meaningful technology.</p>
   <a class="hero-cta" href="#experience">Explore My Portfolio</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <p class="section-label">Who I Am</p>
+    <h2 class="section-title">About</h2>
+    <blockquote class="philosophy-quote">"I believe learning is strongest when students are given space to question, investigate, collaborate, and make sense of ideas for themselves."</blockquote>
+    <div class="about-text">
+      <p>I am a Physics educator, IB Programme and Workshop Leader, and Apple Distinguished Educator with 20 years of teaching experience across Singapore, Indonesia, and China. My work is grounded in inquiry-based learning and the thoughtful use of technology to deepen student understanding. As artificial intelligence becomes part of everyday learning, I am especially interested in how teachers can use AI to support feedback, reflection, and student agency without losing the human relationships at the heart of education. My experiences across different school systems have shaped me into a teacher who values adaptability, cultural awareness, and learning that feels purposeful to students.</p>
+    </div>
+  </div>
 </section>
 
 <!-- EXPERIENCE -->
@@ -279,8 +298,8 @@
       <div>
         <div class="cert-group-title">IB Certifications</div>
         <ul class="cert-list">
-          <li><a href="documents/ib-programme-leader.pdf" target="_blank">IB Programme Leader</a></li>
-          <li><a href="documents/ib-workshop-leader.pdf" target="_blank">IB Workshop Leader</a></li>
+          <li class="cert-featured"><a href="documents/ib-programme-leader.pdf" target="_blank">IB Programme Leader</a></li>
+          <li class="cert-featured"><a href="documents/ib-workshop-leader.pdf" target="_blank">IB Workshop Leader</a></li>
           <li><a href="documents/ib-dp-physics-cat1.pdf" target="_blank">DP Physics — Category 1</a></li>
           <li><a href="documents/ib-dp-physics-cat2.pdf" target="_blank">DP Physics — Category 2</a></li>
           <li><a href="https://drive.google.com/file/d/14eoopBIty3li_rTq3vAN9tqr5jB4VtJ6/view" target="_blank">DP Physics — Category 2 (Curriculum Update)</a></li>
@@ -298,17 +317,17 @@
       <div>
         <div class="cert-group-title">Technology & AI</div>
         <ul class="cert-list">
-          <li><a href="documents/tech-gemini-certified-faculty.pdf" target="_blank">Gemini Certified Faculty</a></li>
+          <li class="cert-featured"><a href="documents/tech-gemini-certified-faculty.pdf" target="_blank">Gemini Certified Faculty</a></li>
           <li><a href="documents/tech-gemini-certified-educator.pdf" target="_blank">Gemini Certified Educator</a></li>
           <li><a href="documents/tech-google-educator-level2.pdf" target="_blank">Google Certified Educator Level 2</a></li>
           <li><a href="documents/tech-google-educator-level1.pdf" target="_blank">Google Certified Educator Level 1</a></li>
           <li><a href="documents/tech-apple-teacher.pdf" target="_blank">Apple Teacher</a></li>
           <li><a href="https://www.coursera.org/account/accomplishments/certificate/T6JDBEYMM494" target="_blank">Coursera: Generative AI for Everyone</a></li>
-          <li><a href="https://certificates.gse.upenn.edu/06f92fa6-ecbb-445d-969d-81be7d59b8ae" target="_blank">Penn GSE: Introducing AI into the Classroom</a></li>
+          <li class="cert-featured"><a href="https://certificates.gse.upenn.edu/06f92fa6-ecbb-445d-969d-81be7d59b8ae" target="_blank">Penn GSE: Introducing AI into the Classroom</a></li>
         </ul>
         <div class="cert-group-title" style="margin-top:40px;">Professional Development</div>
         <ul class="cert-list">
-          <li><a href="https://drive.google.com/file/d/1UTXq8nta4Hozy_8aDRfSm7wq2j4r1L/view" target="_blank">Harvard GSE: Certificate in Media & Technology for Education</a></li>
+          <li class="cert-featured"><a href="https://drive.google.com/file/d/1UTXq8nta4Hozy_8aDRfSm7wq2j4r1L/view" target="_blank">Harvard GSE: Certificate in Media & Technology for Education</a></li>
           <li><a href="https://drive.google.com/file/d/1NzxvkFo25b5ndaJMGgt31WxAAZW5XacU/view" target="_blank">Harvard GSE: Developing Strategies for Online Teaching</a></li>
           <li><a href="https://drive.google.com/file/d/1bVs1mx6Hg6kBlpsTEsEcowX_9opPIIP-/view" target="_blank">Harvard GSE: Online Teaching and Learning in Action</a></li>
           <li><a href="https://drive.google.com/file/d/10Qes3H0oKe792ByW-2NhZbRw8JiW7cYa/view" target="_blank">Harvard GSE: Screen-Time Savvy & Digital Media Literacy</a></li>
