@@ -127,6 +127,15 @@
     .video-modal-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: var(--white); font-size: 1.8rem; cursor: pointer; line-height: 1; padding: 4px 8px; opacity: 0.7; transition: opacity 0.2s; }
     .video-modal-close:hover { opacity: 1; }
 
+    .image-modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; padding: 24px; }
+    .image-modal.open { display: flex; }
+    .image-modal-inner { position: relative; max-width: min(90vw, 1000px); }
+    .image-modal-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: var(--white); font-size: 1.8rem; cursor: pointer; line-height: 1; padding: 4px 8px; opacity: 0.7; transition: opacity 0.2s; }
+    .image-modal-close:hover { opacity: 1; }
+    .image-modal-inner img { display: block; max-width: 100%; max-height: 80vh; object-fit: contain; }
+    .image-modal-caption { background: rgba(0,0,0,0.75); color: var(--white); font-size: 0.82rem; line-height: 1.5; padding: 12px 16px; }
+    .gallery-item { cursor: pointer; }
+
     /* TESTIMONIALS */
     #testimonials { background: var(--gray-100); }
     .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
@@ -370,58 +379,58 @@
         <div class="gallery-overlay"><span>Fire in the Hole — Investigating Projectile Motion</span></div>
         <div class="gallery-play-btn"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></div>
       </div>
-      <a class="gallery-item" href="images/gallery-students-data-analysis.jpg" target="_blank">
+      <div class="gallery-item" onclick="openImageModal('images/gallery-students-data-analysis.jpg', 'Authentic Learning Experience — Students process and analyse data they\'ve personally gathered to make sense of their observations.')">
         <img src="images/gallery-students-data-analysis.jpg" alt="Student data analysis" loading="lazy" />
         <div class="gallery-overlay"><span>Authentic Learning Experience — Students process and analyse data they've personally gathered to make sense of their observations.</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery-lab-overview.jpg" target="_blank">
+      </div>
+      <div class="gallery-item" onclick="openImageModal('images/gallery-lab-overview.jpg', '21st Century Classroom — Teacher as a facilitator of learning. Moving away from a teacher-centered approach.')">
         <img src="images/gallery-lab-overview.jpg" alt="Physics lab" loading="lazy" />
         <div class="gallery-overlay"><span>21st Century Classroom — Teacher as a facilitator of learning. Moving away from a teacher-centered approach.</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery-teachers-pd-workshop.jpg" target="_blank">
+      </div>
+      <div class="gallery-item" onclick="openImageModal('images/gallery-teachers-pd-workshop.jpg', 'Lifelong Learner — IB Physics Cat. 2 Workshop, Sekolah Pelita Harapan, Indonesia')">
         <img src="images/gallery-teachers-pd-workshop.jpg" alt="IB Workshop" loading="lazy" />
         <div class="gallery-overlay"><span>Lifelong Learner — IB Physics Cat. 2 Workshop, Sekolah Pelita Harapan, Indonesia</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery-students-sensor-experiment.jpg" target="_blank">
+      </div>
+      <div class="gallery-item" onclick="openImageModal('images/gallery-students-sensor-experiment.jpg', 'ATL: Communication Skills — A student explains data interpretation to his group')">
         <img src="images/gallery-students-sensor-experiment.jpg" alt="Sensor experiment" loading="lazy" />
         <div class="gallery-overlay"><span>ATL: Communication Skills — A student explains data interpretation to his group</span></div>
-      </a>
-      <a class="gallery-item wide" href="images/gallery-students-physics-measurement.jpg" target="_blank">
+      </div>
+      <div class="gallery-item wide" onclick="openImageModal('images/gallery-students-physics-measurement.jpg', 'Learning by Doing — Students who physically experience scientific concepts understand them more deeply')">
         <img src="images/gallery-students-physics-measurement.jpg" alt="Physics measurement" loading="lazy" />
         <div class="gallery-overlay"><span>Learning by Doing — Students who physically experience scientific concepts understand them more deeply</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery-students-equations-paper.jpg" target="_blank">
+      </div>
+      <div class="gallery-item" onclick="openImageModal('images/gallery-students-equations-paper.jpg', 'Learning for Understanding — Deriving SUVAT equations, not memorising them')">
         <img src="images/gallery-students-equations-paper.jpg" alt="Working through equations" loading="lazy" />
         <div class="gallery-overlay"><span>Learning for Understanding — Deriving SUVAT equations, not memorising them</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery-students-physics-presentation.jpg" target="_blank">
+      </div>
+      <div class="gallery-item" onclick="openImageModal('images/gallery-students-physics-presentation.jpg', 'Integrating Technology — Making physics learning more efficient and effective')">
         <img src="images/gallery-students-physics-presentation.jpg" alt="Student presentation" loading="lazy" />
         <div class="gallery-overlay"><span>Integrating Technology — Making physics learning more efficient and effective</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery-students-lab-experiment.jpg" target="_blank">
+      </div>
+      <div class="gallery-item" onclick="openImageModal('images/gallery-students-lab-experiment.jpg', 'Having Fun While Learning — The Physics of Angry Birds')">
         <img src="images/gallery-students-lab-experiment.jpg" alt="Lab experiment" loading="lazy" />
         <div class="gallery-overlay"><span>Having Fun While Learning — The Physics of Angry Birds</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery-students-physics-lab-review.jpg" target="_blank">
+      </div>
+      <div class="gallery-item" onclick="openImageModal('images/gallery-students-physics-lab-review.jpg', 'When Love and Hate Collide — Investigating elastic and inelastic collisions')">
         <img src="images/gallery-students-physics-lab-review.jpg" alt="Physics lab review" loading="lazy" />
         <div class="gallery-overlay"><span>When Love and Hate Collide — Investigating elastic and inelastic collisions</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery-students-lab-laptops.jpg" target="_blank">
+      </div>
+      <div class="gallery-item" onclick="openImageModal('images/gallery-students-lab-laptops.jpg', 'Peer Learning — &quot;Learning with and from each other is a necessary aspect of all courses.&quot; (Boud, 2001)')">
         <img src="images/gallery-students-lab-laptops.jpg" alt="Digital lab work" loading="lazy" />
         <div class="gallery-overlay"><span>Peer Learning — "Learning with and from each other is a necessary aspect of all courses." (Boud, 2001)</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery-students-collaborative-work.jpg" target="_blank">
+      </div>
+      <div class="gallery-item" onclick="openImageModal('images/gallery-students-collaborative-work.jpg', 'Communication and Collaboration — Working in groups to solve a common problem')">
         <img src="images/gallery-students-collaborative-work.jpg" alt="Collaborative work" loading="lazy" />
         <div class="gallery-overlay"><span>Communication and Collaboration — Working in groups to solve a common problem</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery-student-tablet-lab.jpg" target="_blank">
+      </div>
+      <div class="gallery-item" onclick="openImageModal('images/gallery-student-tablet-lab.jpg', 'Self-Directed Learning — A student investigating relationships between variables she chose herself')">
         <img src="images/gallery-student-tablet-lab.jpg" alt="Technology in the classroom" loading="lazy" />
         <div class="gallery-overlay"><span>Self-Directed Learning — A student investigating relationships between variables she chose herself</span></div>
-      </a>
-      <a class="gallery-item" href="images/gallery-students-wave-experiment.jpg" target="_blank">
+      </div>
+      <div class="gallery-item" onclick="openImageModal('images/gallery-students-wave-experiment.jpg', 'Back to Basics — Keeping it simple and catering to kinesthetic learners')">
         <img src="images/gallery-students-wave-experiment.jpg" alt="Wave experiment" loading="lazy" />
         <div class="gallery-overlay"><span>Back to Basics — Keeping it simple and catering to kinesthetic learners</span></div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -523,6 +532,14 @@
 
 <footer>&copy; 2026 Amin Abu Bakar. All rights reserved.</footer>
 
+<div class="image-modal" id="imageModal" onclick="handleImageModalClick(event)">
+  <div class="image-modal-inner">
+    <button class="image-modal-close" onclick="closeImageModal()">&times;</button>
+    <img id="imageModalImg" src="" alt="" />
+    <div class="image-modal-caption" id="imageModalCaption"></div>
+  </div>
+</div>
+
 <div class="video-modal" id="videoModal" onclick="handleModalClick(event)">
   <div class="video-modal-inner">
     <button class="video-modal-close" onclick="closeVideoModal()">&times;</button>
@@ -544,7 +561,21 @@
   function handleModalClick(e) {
     if (e.target === document.getElementById('videoModal')) closeVideoModal();
   }
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeVideoModal(); });
+  function openImageModal(src, caption) {
+    document.getElementById('imageModalImg').src = src;
+    document.getElementById('imageModalCaption').textContent = caption;
+    document.getElementById('imageModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImageModal() {
+    document.getElementById('imageModalImg').src = '';
+    document.getElementById('imageModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function handleImageModalClick(e) {
+    if (e.target === document.getElementById('imageModal')) closeImageModal();
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeVideoModal(); closeImageModal(); } });
 
   const toggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
