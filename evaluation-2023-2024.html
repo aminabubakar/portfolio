@@ -1,108 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evaluation 2023–2024 — Amin Abu Bakar</title>
+  <title>Reflections 2023–2024 | Dr. Amin Abu Bakar</title>
   <meta name="description" content="S&P Framework annual evaluation for 2023–2024, documenting Amin Abu Bakar's professional growth as an IB educator." />
+  <meta name="theme-color" content="#0a0d12" />
   <link rel="canonical" href="https://aminabubakar.com/evaluation-2023-2024.html" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --black: #0d0d0d; --white: #ffffff;
-      --gray-100: #f5f5f5; --gray-200: #e8e8e8;
-      --gray-400: #999; --gray-600: #555; --gray-800: #222;
-      --serif: 'Playfair Display', Georgia, serif;
-      --sans: 'Inter', system-ui, sans-serif;
-      --max-w: 760px;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
-
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 60px; }
-    .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--black); text-decoration: none; }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--black); }
-    .nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; margin-left: auto; }
-    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
-    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    .page-header { padding: 120px 24px 60px; background: var(--black); color: var(--white); }
-    .page-header .back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 28px; transition: color 0.2s; }
-    .page-header .back:hover { color: rgba(255,255,255,0.8); }
-    .page-header .back::before { content: '←'; font-size: 0.85rem; }
-    .page-header .eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
-    .page-header h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 12px; }
-    .page-header .meta { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
-
-    .content { max-width: var(--max-w); margin: 0 auto; padding: 72px 24px 100px; }
-
-    .section { margin-bottom: 64px; }
-    .section-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      background: var(--black);
-      color: var(--white);
-      display: inline-block;
-      padding: 4px 12px;
-      margin-bottom: 32px;
-    }
-
-    .entry { margin-bottom: 40px; }
-    .entry-standard {
-      font-size: 0.78rem;
-      color: var(--gray-400);
-      font-style: italic;
-      margin-bottom: 14px;
-      line-height: 1.5;
-    }
-    .entry-body { font-size: 0.97rem; color: var(--gray-800); line-height: 1.75; }
-
-    .entry-photo { margin: 20px 0; }
-    .entry-photo img { width: 100%; max-width: 600px; height: auto; display: block; border: 1px solid var(--gray-200); }
-    .entry-caption { font-size: 0.8rem; color: var(--gray-600); font-style: italic; line-height: 1.55; margin-top: 10px; max-width: 600px; }
-
-    .external-links { margin-top: 16px; }
-    .external-links p { font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
-    .external-links a { display: block; font-size: 0.82rem; color: var(--black); margin-bottom: 6px; word-break: break-all; }
-
-    .year-nav { background: var(--gray-100); border-bottom: 1px solid var(--gray-200); }
-    .year-nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; display: flex; gap: 0; }
-    .year-nav a { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); text-decoration: none; padding: 14px 20px; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; white-space: nowrap; }
-    .year-nav a:hover { color: var(--black); }
-    .year-nav a.active { color: var(--black); border-bottom-color: var(--black); }
-
-    footer { background: var(--black); text-align: center; padding: 24px; font-size: 0.75rem; color: #444; }
-
-    @media (max-width: 720px) {
-      nav { padding: 0 16px; }
-      .nav-toggle { display: flex; }
-      .nav-links {
-        display: none;
-        position: fixed;
-        top: 60px; left: 0; right: 0;
-        background: var(--white);
-        border-bottom: 1px solid var(--gray-200);
-        flex-direction: column;
-        padding: 12px 20px 20px;
-        gap: 0;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      }
-      .nav-links.open { display: flex; }
-      .nav-links li { border-bottom: 1px solid var(--gray-200); }
-      .nav-links li:last-child { border-bottom: none; }
-      .nav-links a { display: block; padding: 14px 0; font-size: 0.82rem; letter-spacing: 0.1em; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+  <!-- Tailwind (CDN) for utility classes. Tokens and components live in css/site.css. -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.tailwind) return;
+      tailwind.config = {
+        theme: { extend: {
+          fontFamily: { display: ['Space Grotesk', 'Inter', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+          colors: { ink: '#0a0d12', paper: '#fafaf7', signal: '#4fd1c5' }
+        } }
+      };
+    });
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5S4Q15B5RE"></script>
   <script>
@@ -114,42 +36,61 @@
 </head>
 <body>
 
-<nav>
-  <a class="nav-name" href="index.html">Amin Abu Bakar</a>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="index.html#experience">Experience</a></li>
-    <li><a href="index.html#certifications">Certifications</a></li>
-    <li><a href="index.html#gallery">Gallery</a></li>
-    <li><a href="goals.html">Goals</a></li>
-    <li><a href="evaluation.html" class="active">Evaluation</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
-</nav>
+<a class="skip" href="#main">Skip to content</a>
 
-<div class="page-header">
-  <a class="back" href="evaluation.html">All Evaluations</a>
-  <h1>2023 – 2024</h1>
-</div>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Amin Abu Bakar <span class="brand-tag">Ed.D.</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="moments.html">Moments</a></li>
+        <li><a href="goals.html">Goals</a></li>
+        <li><a href="evaluation.html" aria-current="page">Reflections</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-<div class="year-nav">
-  <div class="year-nav-inner">
-    <a href="evaluation.html">All Years</a>
-    <a href="evaluation-2021-2022.html">2021–22</a>
-    <a href="evaluation-2022-2023.html">2022–23</a>
-    <a href="evaluation-2023-2024.html" class="active">2023–24</a>
-    <a href="evaluation-2024-2025.html">2024–25</a>
-    <a href="evaluation-2025-2026.html">2025–26</a>
+<main id="main">
+<div class="page-head on-ink">
+  <div class="wrap">
+    <a class="back" href="evaluation.html"><span aria-hidden="true">&larr;</span> All reflections</a>
+    <p class="kicker">Annual evaluation</p>
+    <h1 class="h-display">2023 &ndash; 2024</h1>
+    <p class="lede">A year of practice, reflected on against the IB Standards &amp; Practices Framework.</p>
   </div>
 </div>
 
-<div class="content">
+<div class="year-nav">
+  <nav class="year-nav-inner" aria-label="Evaluation years">
+      <a href="evaluation.html">All Years</a>
+      <a href="evaluation-2021-2022.html">2021–22</a>
+      <a href="evaluation-2022-2023.html">2022–23</a>
+      <a href="evaluation-2023-2024.html" class="active" aria-current="true">2023–24</a>
+      <a href="evaluation-2024-2025.html">2024–25</a>
+      <a href="evaluation-2025-2026.html">2025–26</a>
+  </nav>
+</div>
+
+<div class="wrap doc">
+  <aside class="rail" aria-label="Sections of this evaluation">
+    <p class="rail-title">In this evaluation</p>
+    <ol>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#purpose">Purpose</a></li>
+        <li><a href="#additional-contributions">Additional Contributions</a></li>
+    </ol>
+    <p class="rail-note">Entries are grouped by framework area, and each one opens with the practice it gives evidence for.</p>
+  </aside>
+  <div class="doc-col">
+
 
   <!-- LEARNING -->
-  <div class="section">
-    <div class="section-label">Learning</div>
+  <div class="section" id="learning">
+    <h2 class="section-label" data-n="01">Learning</h2>
 
     <div class="entry">
       <div class="entry-standard">Teachers use inquiry-based teaching strategies and learning engagements. (0403-01-0100)</div>
@@ -161,8 +102,8 @@
   </div>
 
   <!-- PURPOSE -->
-  <div class="section">
-    <div class="section-label">Purpose</div>
+  <div class="section" id="purpose">
+    <h2 class="section-label" data-n="02">Purpose</h2>
 
     <div class="entry">
       <div class="entry-standard">The school develops a mission, philosophy and/or strategy that includes a holistic approach to education that goes beyond academic development and encourages awareness beyond the individual and the immediate community. (0101-01-0200)</div>
@@ -174,8 +115,8 @@
   </div>
 
   <!-- MARKETING TEAM -->
-  <div class="section">
-    <div class="section-label">Additional Contributions</div>
+  <div class="section" id="additional-contributions">
+    <h2 class="section-label" data-n="03">Additional Contributions</h2>
 
     <div class="entry">
       <div class="entry-body" style="font-weight: 600; margin-bottom: 12px;">Helping out the Marketing Team</div>
@@ -187,26 +128,28 @@
     </div>
   </div>
 
-
+    <nav class="pager" aria-label="Other years">
+      <a class="prev" href="evaluation-2022-2023.html"><small>&larr; Earlier</small><b>2022 – 2023</b></a>
+      <a class="next" href="evaluation-2024-2025.html"><small>Later &rarr;</small><b>2024 – 2025</b></a>
+    </nav>
+  </div>
 </div>
+</main>
 
-<footer>&copy; 2026 Amin Abu Bakar. All rights reserved.</footer>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-row">
+      <span class="footer-place">Shenzhen, Guangdong, China</span>
+      <ul class="footer-links">
+        <li><a href="mailto:aminurrashidabubakar@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/aminabubakar/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/aminabubakar" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+    <p class="footer-legal">&copy; 2026 Amin Abu Bakar. All rights reserved.</p>
+  </div>
+</footer>
 
-<script>
-  const toggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  toggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>
