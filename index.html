@@ -1,211 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amin Abu Bakar — IB Physics Educator & Leader</title>
-  <meta name="description" content="Amin Abu Bakar – Apple Distinguished Educator, IB Programme &amp; Workshop Leader, Physics &amp; Extended Essay Examiner, and Physics Educator." />
+  <title>Dr. Amin Abu Bakar | IB DP Physics &amp; MYP Science Educator</title>
+  <meta name="description" content="Dr. Amin Abu Bakar. IB DP Physics and MYP Science educator, IB Programme Leader and Workshop Leader, Apple Distinguished Educator, Ed.D." />
+  <meta name="theme-color" content="#0a0d12" />
   <link rel="canonical" href="https://aminabubakar.com/" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --black: #0d0d0d; --white: #ffffff;
-      --gray-100: #f5f5f5; --gray-200: #e8e8e8;
-      --gray-400: #999; --gray-600: #555; --gray-800: #222;
-      --serif: 'Playfair Display', Georgia, serif;
-      --sans: 'Inter', system-ui, sans-serif;
-      --max-w: 900px;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-
-    /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 60px; }
-    .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--black); text-decoration: none; white-space: nowrap; }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--black); }
-    .nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; margin-left: auto; }
-    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
-    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    /* HERO */
-    #hero {
-      min-height: 100vh;
-      background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
-        url('images/hero-ib-workshop.jpg');
-      background-size: cover;
-      background-position: center 30%;
-      color: var(--white);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 100px 24px 80px;
-    }
-    .hero-eyebrow { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 24px; }
-    .hero-name { font-family: var(--serif); font-size: clamp(3rem, 8vw, 6rem); font-weight: 700; line-height: 1.08; margin-bottom: 28px; }
-    .hero-divider { width: 40px; height: 1px; background: rgba(255,255,255,0.4); margin: 0 auto 28px; }
-    .hero-title { font-size: clamp(0.95rem, 2vw, 1.1rem); font-weight: 300; color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 48px; line-height: 1.65; }
-    .hero-title strong { color: var(--white); font-weight: 500; }
-    .hero-cta { display: inline-block; padding: 14px 36px; border: 1px solid rgba(255,255,255,0.4); color: var(--white); text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s, border-color 0.2s; }
-    .hero-cta:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
-
-    /* SECTIONS */
-    section { padding: 90px 24px; }
-    .section-inner { max-width: var(--max-w); margin: 0 auto; }
-    .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 12px; }
-    .section-title { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.2; margin-bottom: 56px; }
-
-    /* ABOUT */
-    #about { background: var(--gray-100); }
-    .philosophy-quote { font-family: var(--serif); font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-style: italic; line-height: 1.65; color: var(--gray-800); border-left: 3px solid var(--black); padding: 16px 0 16px 28px; margin-bottom: 44px; max-width: 720px; }
-    .about-text { display: flex; flex-direction: column; gap: 20px; max-width: 720px; }
-    .about-text p { font-size: 1rem; color: var(--gray-600); line-height: 1.85; }
-
-    /* EXPERIENCE */
-    #experience { background: var(--white); }
-    .timeline-item { padding: 32px 0; border-top: 1px solid var(--gray-200); }
-    .timeline-item:last-child { border-bottom: 1px solid var(--gray-200); }
-    .timeline-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
-    .timeline-org { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-600); }
-    .timeline-date { font-size: 0.78rem; font-weight: 500; color: var(--gray-400); white-space: nowrap; margin-left: 16px; }
-    .timeline-roles { display: flex; flex-direction: column; gap: 10px; }
-    .timeline-role { font-size: 1.05rem; font-weight: 600; }
-    .timeline-subyear { font-size: 0.75rem; font-weight: 400; color: var(--gray-400); margin-left: 8px; }
-
-    /* EDUCATION */
-    #education { background: var(--gray-100); }
-    .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
-    .edu-card { background: var(--white); padding: 36px 32px; }
-    .edu-badge { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; color: var(--gray-400); border: 1px solid var(--gray-200); padding: 3px 10px; margin-bottom: 20px; }
-    .edu-degree { font-size: 1rem; font-weight: 600; line-height: 1.4; margin-bottom: 8px; }
-    .edu-school { font-size: 0.88rem; color: var(--gray-600); }
-    .edu-year { font-size: 0.78rem; color: var(--gray-400); margin-top: 8px; }
-    .edu-detail { font-size: 0.82rem; color: var(--gray-500); margin-top: 4px; }
-    .edu-inprogress { display: inline-block; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--black); padding: 2px 7px; margin-left: 6px; vertical-align: middle; }
-
-    /* CERTIFICATIONS */
-    #certifications { background: var(--white); }
-    .cert-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 48px 64px; }
-    .cert-group-title { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--black); border-bottom: 2px solid var(--black); padding-bottom: 10px; margin-bottom: 20px; }
-    .cert-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .cert-list li { font-size: 0.88rem; color: var(--gray-600); padding-left: 16px; position: relative; line-height: 1.4; }
-    .cert-list li::before { content: '—'; position: absolute; left: 0; color: var(--gray-400); font-size: 0.7rem; top: 3px; }
-    .cert-list a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--gray-200); transition: border-color 0.2s, color 0.2s; }
-    .cert-list a:hover { color: var(--black); border-color: var(--black); }
-    .cert-list li.cert-featured { color: var(--black); font-weight: 600; }
-    .cert-list li.cert-featured::before { content: '★'; color: var(--black); font-size: 0.62rem; top: 4px; }
-    .cert-list li.cert-featured a { color: var(--black); border-color: var(--gray-400); }
-
-    /* GALLERY */
-    #gallery { background: var(--black); padding: 90px 24px; }
-    #gallery .section-label { color: #666; }
-    #gallery .section-title { color: var(--white); margin-bottom: 40px; }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 220px;
-      gap: 6px;
-    }
-    .gallery-grid .wide { grid-column: span 2; }
-    .gallery-item { overflow: hidden; display: block; position: relative; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(30%); transition: filter 0.4s, transform 0.4s; }
-    .gallery-item:hover img { filter: grayscale(0%); transform: scale(1.04); }
-    .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 60%, transparent 100%); display: flex; align-items: flex-end; padding: 18px 20px; opacity: 0; transition: opacity 0.35s; pointer-events: none; }
-    .gallery-overlay span { color: var(--white); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.03em; line-height: 1.3; }
-    .gallery-item:hover .gallery-overlay { opacity: 1; }
-    .gallery-item-video { cursor: pointer; }
-    .gallery-play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.2s; pointer-events: none; }
-    .gallery-item-video:hover .gallery-play-btn { background: rgba(255,255,255,1); transform: translate(-50%, -50%) scale(1.1); }
-    .gallery-play-btn svg { width: 20px; height: 20px; margin-left: 3px; fill: #0d0d0d; }
-    .video-modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; }
-    .video-modal.open { display: flex; }
-    .video-modal-inner { position: relative; width: 90%; max-width: 900px; aspect-ratio: 16/9; }
-    .video-modal-inner iframe { width: 100%; height: 100%; border: none; }
-    .video-modal-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: var(--white); font-size: 1.8rem; cursor: pointer; line-height: 1; padding: 4px 8px; opacity: 0.7; transition: opacity 0.2s; }
-    .video-modal-close:hover { opacity: 1; }
-
-    .image-modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; padding: 24px; }
-    .image-modal.open { display: flex; }
-    .image-modal-inner { position: relative; max-width: min(90vw, 1000px); }
-    .image-modal-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: var(--white); font-size: 1.8rem; cursor: pointer; line-height: 1; padding: 4px 8px; opacity: 0.7; transition: opacity 0.2s; }
-    .image-modal-close:hover { opacity: 1; }
-    .image-modal-inner img { display: block; max-width: 100%; max-height: 80vh; object-fit: contain; }
-    .image-modal-caption { background: rgba(0,0,0,0.75); color: var(--white); font-size: 0.82rem; line-height: 1.5; padding: 12px 16px; }
-    .gallery-item { cursor: pointer; }
-
-    /* TESTIMONIALS */
-    #testimonials { background: var(--gray-100); }
-    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
-    .testimonial-card { background: var(--white); padding: 44px 40px; }
-    .testimonial-quote { font-family: var(--serif); font-size: 1.02rem; line-height: 1.7; color: var(--gray-800); margin-bottom: 28px; font-style: italic; }
-    .testimonial-footer { display: flex; align-items: flex-start; gap: 16px; margin-top: 4px; }
-    .testimonial-avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; border: 2px solid var(--gray-200); }
-    .testimonial-author-info { display: flex; flex-direction: column; }
-    .testimonial-author { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; color: var(--black); text-transform: uppercase; }
-    .testimonial-role { font-size: 0.78rem; color: var(--gray-400); margin-top: 4px; }
-    .testimonial-link { display: inline-block; margin-top: 10px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; border-bottom: 1px solid var(--gray-200); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
-    .testimonial-link:hover { color: var(--black); border-color: var(--black); }
-
-    /* DEEPER DIVE */
-    #deeper-dive { background: var(--black); color: var(--white); }
-    #deeper-dive .section-label { color: rgba(255,255,255,0.4); }
-    #deeper-dive .section-title { color: var(--white); margin-bottom: 40px; }
-    .dive-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); }
-    .dive-card { background: var(--black); padding: 44px 40px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: var(--white); transition: background 0.2s; }
-    .dive-card:hover { background: #1a1a1a; }
-    .dive-card-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
-    .dive-card-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; line-height: 1.25; }
-    .dive-card-desc { font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
-    .dive-card-arrow { font-size: 1.1rem; color: rgba(255,255,255,0.3); margin-top: auto; transition: color 0.2s; }
-    .dive-card:hover .dive-card-arrow { color: var(--white); }
-
-    /* CONTACT */
-    #contact { background: var(--black); color: var(--white); text-align: center; }
-    #contact .section-title { color: var(--white); }
-    .contact-links { display: flex; gap: 48px; justify-content: center; flex-wrap: wrap; }
-    .contact-link { display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; }
-    .contact-link-label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray-400); }
-    .contact-link-value { font-size: 0.95rem; color: var(--white); border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1px; transition: border-color 0.2s; }
-    .contact-link:hover .contact-link-value { border-color: rgba(255,255,255,0.6); }
-    .contact-location { font-size: 0.82rem; color: var(--gray-400); margin-top: 48px; }
-
-    footer { background: var(--black); border-top: 1px solid rgba(255,255,255,0.08); text-align: center; padding: 24px; font-size: 0.75rem; color: #444; }
-
-    @media (max-width: 720px) {
-      nav { padding: 0 16px; }
-      .nav-toggle { display: flex; }
-      .nav-links {
-        display: none;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        border-bottom: 1px solid var(--gray-200);
-        flex-direction: column;
-        padding: 12px 20px 20px;
-        gap: 0;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      }
-      .nav-links.open { display: flex; }
-      .nav-links li { border-bottom: 1px solid var(--gray-200); }
-      .nav-links li:last-child { border-bottom: none; }
-      .nav-links a { display: block; padding: 14px 0; font-size: 0.82rem; letter-spacing: 0.1em; }
-    }
-    @media (max-width: 480px) {
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
-      .gallery-grid .wide { grid-column: span 2; }
-      .testimonial-grid { grid-template-columns: 1fr; }
-      .testimonial-card { padding: 32px 24px; }
-      .dive-grid { grid-template-columns: 1fr; }
-      .dive-card { padding: 36px 28px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+  <!-- Tailwind (CDN) for utility classes. Tokens and components live in css/site.css. -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.tailwind) return;
+      tailwind.config = {
+        theme: { extend: {
+          fontFamily: { display: ['Space Grotesk', 'Inter', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+          colors: { ink: '#0a0d12', paper: '#fafaf7', signal: '#4fd1c5' }
+        } }
+      };
+    });
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5S4Q15B5RE"></script>
   <script>
@@ -217,399 +36,300 @@
 </head>
 <body>
 
-<nav>
-  <a class="nav-name" href="index.html">Amin Abu Bakar</a>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#gallery">Moments</a></li>
-    <li><a href="goals.html">Goals</a></li>
-    <li><a href="evaluation.html">Reflections</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+<a class="skip" href="#main">Skip to content</a>
 
-<!-- HERO -->
-<section id="hero">
-  <p class="hero-eyebrow">Portfolio</p>
-  <h1 class="hero-name">Amin Abu Bakar</h1>
-  <div class="hero-divider"></div>
-  <p class="hero-title">Helping students understand physics through inquiry and meaningful technology.</p>
-  <a class="hero-cta" href="#about">Explore My Portfolio</a>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Amin Abu Bakar <span class="brand-tag">Ed.D.</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" aria-current="page">Overview</a></li>
+        <li><a href="moments.html">Moments</a></li>
+        <li><a href="goals.html">Goals</a></li>
+        <li><a href="evaluation.html">Reflections</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero on-ink">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="hero-coords"><span>Portfolio</span><span><b>22.54&deg; N</b> &nbsp;114.06&deg; E</span><span>Shenzhen, China</span></p>
+    <h1 class="h-display"><span class="dr">Dr.</span> Amin<br />Abu Bakar</h1>
+    <p class="hero-role">IB DP Physics &amp; MYP Science Educator</p>
+    <div class="hero-tags">
+      <span class="tag tag-dot">IB Programme Leader</span>
+      <span class="tag tag-dot">Apple Distinguished Educator (ADE)</span>
+      <span class="tag tag-dot">Ed.D.</span>
+    </div>
+    <p class="hero-line">Helping students understand physics through inquiry and meaningful technology.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#about">Explore the portfolio <span class="arrow" aria-hidden="true">&darr;</span></a>
+      <a class="btn btn-ghost" href="moments.html">See the classroom <span class="arrow" aria-hidden="true">&rarr;</span></a>
+    </div>
+    <span class="hero-hint" aria-hidden="true">Move the cursor. The field responds.</span>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner">
-    <p class="section-label">Who I Am</p>
-    <h2 class="section-title">About</h2>
-    <blockquote class="philosophy-quote">"I believe students learn best when they are given space to question, investigate, collaborate, and make sense of ideas for themselves."</blockquote>
-    <div class="about-text">
-      <p>I am a Physics educator, IB Programme and Workshop Leader, and an Apple Distinguished Educator with 20 years of teaching experience across Singapore, Indonesia, and China. My work is grounded in inquiry-based learning and the thoughtful use of technology to deepen student understanding. As artificial intelligence becomes part of everyday learning, I am especially interested in how teachers can use AI to support feedback, reflection, and student agency without losing the human relationships at the heart of education. My experiences across different school systems have shaped me into a teacher who values adaptability, cultural awareness, and learning that feels purposeful to students.</p>
+<section class="metrics on-ink" aria-label="At a glance">
+  <div class="wrap metrics-grid">
+    <div class="metric">
+      <div class="metric-value">20<sup>+</sup></div>
+      <div class="metric-label">Years teaching</div>
+      <p class="metric-note">Physics and science classrooms in Singapore, Indonesia, and China since 2006.</p>
+    </div>
+    <div class="metric">
+      <div class="metric-value">4.0</div>
+      <div class="metric-label">GPA &middot; Chairman's Award</div>
+      <p class="metric-note">Doctor of Education, University College Fairview. Best EdD Graduate.</p>
+    </div>
+    <div class="metric">
+      <div class="metric-value">2<sup>&times;</sup></div>
+      <div class="metric-label">Dual-role IB leader</div>
+      <p class="metric-note">IB Programme Leader and IB Workshop Leader, alongside examining DP Physics and the Extended Essay.</p>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-inner">
-    <p class="section-label">Career</p>
-    <h2 class="section-title">The Journey</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <div class="timeline-org">International Baccalaureate</div>
-          <div class="timeline-date">2021 – Present</div>
-        </div>
-        <div class="timeline-roles">
-          <div class="timeline-role">IB Programme & Workshop Leader <span class="timeline-subyear">2024 – Present</span></div>
-          <div class="timeline-role">IB DP Physics & World Studies Extended Essay Examiner <span class="timeline-subyear">2021 – Present</span></div>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <div class="timeline-org">International School of Nanshan Shenzhen</div>
-          <div class="timeline-date">2018 – Present</div>
-        </div>
-        <div class="timeline-roles">
-          <div class="timeline-role">Grade 9 Team Lead <span class="timeline-subyear">2026 – Present</span></div>
-          <div class="timeline-role">WASC Coordinator <span class="timeline-subyear">2025 – Present</span></div>
-          <div class="timeline-role">MYP Science and DP Physics Teacher <span class="timeline-subyear">2018 – Present</span></div>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <div class="timeline-org">Anglo Chinese School, Jakarta</div>
-          <div class="timeline-date">2011 – 2015</div>
-        </div>
-        <div class="timeline-roles">
-          <div class="timeline-role">IB DP Theory of Knowledge Teacher <span class="timeline-subyear">2014 – 2015</span></div>
-          <div class="timeline-role">IGCSE and DP Physics Teacher <span class="timeline-subyear">2011 – 2015</span></div>
+<section class="band" id="about">
+  <div class="wrap">
+    <p class="kicker">About</p>
+    <div class="about-grid reveal">
+      <blockquote class="statement">I believe students learn best when they are given space to question, investigate, collaborate, and make sense of ideas for themselves.</blockquote>
+      <p class="lede">I am a Physics educator, IB Programme and Workshop Leader, and an Apple Distinguished Educator with 20 years of teaching experience across Singapore, Indonesia, and China. My work is grounded in inquiry-based learning and the thoughtful use of technology to deepen student understanding. As artificial intelligence becomes part of everyday learning, I am especially interested in how teachers can use AI to support feedback, reflection, and student agency without losing the human relationships at the heart of education. My experiences across different school systems have shaped me into a teacher who values adaptability, cultural awareness, and learning that feels purposeful to students.</p>
+    </div>
+    <figure class="about-photo reveal mt-16">
+      <img src="images/hero-ib-workshop.jpg" alt="Speaking with a room of teachers during an IB workshop" loading="lazy" />
+    </figure>
+  </div>
+</section>
+
+<section class="band band-alt" id="experience">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="kicker">Career</p>
+      <h2 class="h-section">The journey so far</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="t-row">
+        <div class="t-date">2021 &ndash; Present</div>
+        <div>
+          <div class="t-org">International Baccalaureate</div>
+          <div class="t-roles">
+            <div class="t-role">IB Programme &amp; Workshop Leader <span>2024 &ndash; Present</span></div>
+            <div class="t-role">IB DP Physics &amp; World Studies Extended Essay Examiner <span>2021 &ndash; Present</span></div>
+          </div>
+          <div class="t-more"><a class="text-link" href="evaluation.html">Reflections against the IB Standards &amp; Practices <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <div class="timeline-org">Ministry of Education, Singapore</div>
-          <div class="timeline-date">2006 – 2011</div>
+      <div class="t-row">
+        <div class="t-date">2018 &ndash; Present</div>
+        <div>
+          <div class="t-org">International School of Nanshan Shenzhen</div>
+          <div class="t-roles">
+            <div class="t-role">Grade 9 Team Lead <span>2026 &ndash; Present</span></div>
+            <div class="t-role">WASC Coordinator <span>2025 &ndash; Present</span></div>
+            <div class="t-role">MYP Science and DP Physics Teacher <span>2018 &ndash; Present</span></div>
+          </div>
+          <div class="t-more">
+            <a class="text-link" href="goals.html">Annual goals <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            <a class="text-link" href="moments.html">Moments from the classroom <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
         </div>
-        <div class="timeline-role">Mathematics and Science Teacher</div>
+      </div>
+      <div class="t-row">
+        <div class="t-date">2011 &ndash; 2015</div>
+        <div>
+          <div class="t-org">Anglo Chinese School, Jakarta</div>
+          <div class="t-roles">
+            <div class="t-role">IB DP Theory of Knowledge Teacher <span>2014 &ndash; 2015</span></div>
+            <div class="t-role">IGCSE and DP Physics Teacher <span>2011 &ndash; 2015</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-date">2006 &ndash; 2011</div>
+        <div>
+          <div class="t-org">Ministry of Education, Singapore</div>
+          <div class="t-roles">
+            <div class="t-role">Mathematics and Science Teacher</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="section-inner">
-    <p class="section-label">Academic Background</p>
-    <h2 class="section-title">Education</h2>
-    <div class="edu-grid">
-      <div class="edu-card">
-        <span class="edu-badge">B.Sc.</span>
-        <div class="edu-degree">Bachelor of Science<br>Major: Physics · Minor: Chemistry</div>
-        <div class="edu-school">Nanyang Technological University</div>
-        <div class="edu-detail">2nd Class Honours</div>
-        <div class="edu-year">2002 – 2006</div>
-      </div>
-      <div class="edu-card">
-        <span class="edu-badge">M.Ed.</span>
-        <div class="edu-degree">Master of Education in Advanced Teaching</div>
-        <div class="edu-school">University of the People</div>
-        <div class="edu-detail">GPA: 4.0</div>
-        <div class="edu-year">2020 – 2022</div>
-      </div>
-      <div class="edu-card">
-        <span class="edu-badge">Ed.D.</span>
-        <div class="edu-degree">Doctor of Education in Educational Research</div>
-        <div class="edu-school">University College Fairview</div>
-        <div class="edu-detail">GPA: 4.0</div>
-        <div class="edu-detail">Chairman's Award – Best EdD Graduate</div>
-        <div class="edu-year">2022 – 2026</div>
-      </div>
+<section class="band" id="education">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="kicker">Academic background</p>
+      <h2 class="h-section">Education</h2>
+    </div>
+    <div class="card-grid reveal">
+      <article class="card">
+        <span class="tag">Ed.D.</span>
+        <h3>Doctor of Education in Educational Research</h3>
+        <p>University College Fairview</p>
+        <p class="card-meta">2022 &ndash; 2026 &middot; <b>GPA 4.0</b><br /><b>Chairman's Award, Best EdD Graduate</b></p>
+      </article>
+      <article class="card">
+        <span class="tag">M.Ed.</span>
+        <h3>Master of Education in Advanced Teaching</h3>
+        <p>University of the People</p>
+        <p class="card-meta">2020 &ndash; 2022 &middot; <b>GPA 4.0</b></p>
+      </article>
+      <article class="card">
+        <span class="tag">B.Sc.</span>
+        <h3>Bachelor of Science<br />Major: Physics &middot; Minor: Chemistry</h3>
+        <p>Nanyang Technological University</p>
+        <p class="card-meta">2002 &ndash; 2006 &middot; 2nd Class Honours</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <div class="section-inner">
-    <p class="section-label">Qualifications</p>
-    <h2 class="section-title">Certifications</h2>
-    <div class="cert-groups">
+<section class="band band-alt" id="certifications">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="kicker">Qualifications</p>
+      <h2 class="h-section">Certifications</h2>
+    </div>
+    <div class="cert-cols reveal">
       <div>
-        <div class="cert-group-title">IB Certifications</div>
+        <h3 class="cert-title">IB Certifications</h3>
         <ul class="cert-list">
-          <li class="cert-featured"><a href="documents/ib-programme-leader.pdf" target="_blank">IB Programme Leader</a></li>
-          <li class="cert-featured"><a href="documents/ib-workshop-leader.pdf" target="_blank">IB Workshop Leader</a></li>
-          <li><a href="documents/ib-dp-physics-cat1.pdf" target="_blank">DP Physics — Category 1</a></li>
-          <li><a href="documents/ib-dp-physics-cat2.pdf" target="_blank">DP Physics — Category 2</a></li>
-          <li><a href="https://drive.google.com/file/d/14eoopBIty3li_rTq3vAN9tqr5jB4VtJ6/view" target="_blank">DP Physics — Category 2 (Curriculum Update)</a></li>
-          <li><a href="documents/ib-dp-tok-cat1.pdf" target="_blank">DP Theory of Knowledge — Category 1</a></li>
-          <li><a href="documents/ib-myp-science-cat1.pdf" target="_blank">MYP Science: Implementing the Curriculum — Cat. 1</a></li>
-          <li><a href="documents/ib-dp-assessment-learning-cat3.pdf" target="_blank">Assessment for Learning in the DP — Cat. 3</a></li>
-          <li><a href="documents/ib-dp-physics-ia-cat3.pdf" target="_blank">DP Physics: Focus on Internal Assessment — Cat. 3</a></li>
-          <li><a href="documents/ib-dp-academic-honesty-cat3.pdf" target="_blank">DP Academic Honesty in Practice — Cat. 3</a></li>
-          <li><a href="documents/ib-dp-tok-subject-teachers-cat3.pdf" target="_blank">DP TOK for Subject Teachers — Cat. 3</a></li>
-          <li><a href="documents/ib-dp-core-cat3.pdf" target="_blank">The DP Core — Cat. 3</a></li>
-          <li><a href="documents/ib-dp-physics-marking-ia-cat3.pdf" target="_blank">Marking your Physics IA — Cat. 3</a></li>
-          <li><a href="documents/ib-myp-inquiry-cat3.pdf" target="_blank">Inquiry in the MYP — Cat. 3</a></li>
+          <li class="featured"><a href="documents/ib-programme-leader.pdf" target="_blank" rel="noopener"><span>IB Programme Leader</span></a></li>
+          <li class="featured"><a href="documents/ib-workshop-leader.pdf" target="_blank" rel="noopener"><span>IB Workshop Leader</span></a></li>
+          <li><a href="documents/ib-dp-physics-cat1.pdf" target="_blank" rel="noopener">DP Physics, Category 1</a></li>
+          <li><a href="documents/ib-dp-physics-cat2.pdf" target="_blank" rel="noopener">DP Physics, Category 2</a></li>
+          <li><a href="https://drive.google.com/file/d/14eoopBIty3li_rTq3vAN9tqr5jB4VtJ6/view" target="_blank" rel="noopener">DP Physics, Category 2 (Curriculum Update)</a></li>
+          <li><a href="documents/ib-dp-tok-cat1.pdf" target="_blank" rel="noopener">DP Theory of Knowledge, Category 1</a></li>
+          <li><a href="documents/ib-myp-science-cat1.pdf" target="_blank" rel="noopener">MYP Science: Implementing the Curriculum, Cat. 1</a></li>
+          <li><a href="documents/ib-dp-assessment-learning-cat3.pdf" target="_blank" rel="noopener">Assessment for Learning in the DP, Cat. 3</a></li>
+          <li><a href="documents/ib-dp-physics-ia-cat3.pdf" target="_blank" rel="noopener">DP Physics: Focus on Internal Assessment, Cat. 3</a></li>
+          <li><a href="documents/ib-dp-academic-honesty-cat3.pdf" target="_blank" rel="noopener">DP Academic Honesty in Practice, Cat. 3</a></li>
+          <li><a href="documents/ib-dp-tok-subject-teachers-cat3.pdf" target="_blank" rel="noopener">DP TOK for Subject Teachers, Cat. 3</a></li>
+          <li><a href="documents/ib-dp-core-cat3.pdf" target="_blank" rel="noopener">The DP Core, Cat. 3</a></li>
+          <li><a href="documents/ib-dp-physics-marking-ia-cat3.pdf" target="_blank" rel="noopener">Marking your Physics IA, Cat. 3</a></li>
+          <li><a href="documents/ib-myp-inquiry-cat3.pdf" target="_blank" rel="noopener">Inquiry in the MYP, Cat. 3</a></li>
         </ul>
       </div>
       <div>
-        <div class="cert-group-title">Technology & AI</div>
+        <h3 class="cert-title">Technology &amp; AI</h3>
         <ul class="cert-list">
-          <li><a href="documents/tech-gemini-certified-faculty.pdf" target="_blank">Gemini Certified Faculty</a></li>
-          <li><a href="documents/tech-gemini-certified-educator.pdf" target="_blank">Gemini Certified Educator</a></li>
-          <li class="cert-featured"><a href="documents/tech-google-educator-level2.pdf" target="_blank">Google Certified Educator Level 2</a></li>
-          <li><a href="documents/tech-google-educator-level1.pdf" target="_blank">Google Certified Educator Level 1</a></li>
-          <li><a href="documents/tech-apple-teacher.pdf" target="_blank">Apple Teacher</a></li>
-          <li><a href="https://www.coursera.org/account/accomplishments/certificate/T6JDBEYMM494" target="_blank">Coursera: Generative AI for Everyone</a></li>
-          <li class="cert-featured"><a href="https://certificates.gse.upenn.edu/06f92fa6-ecbb-445d-969d-81be7d59b8ae" target="_blank">Penn GSE: Introducing AI into the Classroom</a></li>
+          <li><a href="documents/tech-gemini-certified-faculty.pdf" target="_blank" rel="noopener">Gemini Certified Faculty</a></li>
+          <li><a href="documents/tech-gemini-certified-educator.pdf" target="_blank" rel="noopener">Gemini Certified Educator</a></li>
+          <li class="featured"><a href="documents/tech-google-educator-level2.pdf" target="_blank" rel="noopener"><span>Google Certified Educator Level 2</span></a></li>
+          <li><a href="documents/tech-google-educator-level1.pdf" target="_blank" rel="noopener">Google Certified Educator Level 1</a></li>
+          <li><a href="documents/tech-apple-teacher.pdf" target="_blank" rel="noopener">Apple Teacher</a></li>
+          <li><a href="https://www.coursera.org/account/accomplishments/certificate/T6JDBEYMM494" target="_blank" rel="noopener">Coursera: Generative AI for Everyone</a></li>
+          <li class="featured"><a href="https://certificates.gse.upenn.edu/06f92fa6-ecbb-445d-969d-81be7d59b8ae" target="_blank" rel="noopener"><span>Penn GSE: Introducing AI into the Classroom</span></a></li>
         </ul>
-        <div class="cert-group-title" style="margin-top:40px;">Professional Development</div>
+        <h3 class="cert-title">Professional Development</h3>
         <ul class="cert-list">
-          <li class="cert-featured"><a href="https://drive.google.com/file/d/1UTXq8nta4Hozy_8aDRfSm7wk1RFbb2mH/view" target="_blank">Harvard GSE: Certificate in Media & Technology for Education</a></li>
-          <li><a href="https://drive.google.com/file/d/1NzxvkFo25b5ndaJMGgt31WxAAZW5XacU/view" target="_blank">Harvard GSE: Developing Strategies for Online Teaching</a></li>
-          <li><a href="https://drive.google.com/file/d/1bVs1mx6Hg6kBlpsTEsEcowX_9opPIIP-/view" target="_blank">Harvard GSE: Online Teaching and Learning in Action</a></li>
-          <li><a href="https://drive.google.com/file/d/10Qes3H0oKe792ByW-2NhZbRw8JiW7cYa/view" target="_blank">Harvard GSE: Screen-Time Savvy & Digital Media Literacy</a></li>
-          <li><a href="https://drive.google.com/file/d/1FwfQwqbrVQuR6dnfXp0SIfC_P3YxdnYA/view" target="_blank">NSTA: Assessing Three-Dimensional Learning</a></li>
+          <li class="featured"><a href="https://drive.google.com/file/d/1UTXq8nta4Hozy_8aDRfSm7wk1RFbb2mH/view" target="_blank" rel="noopener"><span>Harvard GSE: Certificate in Media &amp; Technology for Education</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1NzxvkFo25b5ndaJMGgt31WxAAZW5XacU/view" target="_blank" rel="noopener">Harvard GSE: Developing Strategies for Online Teaching</a></li>
+          <li><a href="https://drive.google.com/file/d/1bVs1mx6Hg6kBlpsTEsEcowX_9opPIIP-/view" target="_blank" rel="noopener">Harvard GSE: Online Teaching and Learning in Action</a></li>
+          <li><a href="https://drive.google.com/file/d/10Qes3H0oKe792ByW-2NhZbRw8JiW7cYa/view" target="_blank" rel="noopener">Harvard GSE: Screen-Time Savvy &amp; Digital Media Literacy</a></li>
+          <li><a href="https://drive.google.com/file/d/1FwfQwqbrVQuR6dnfXp0SIfC_P3YxdnYA/view" target="_blank" rel="noopener">NSTA: Assessing Three-Dimensional Learning</a></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery">
-  <div class="section-inner">
-    <p class="section-label">In Action</p>
-    <h2 class="section-title">Moments</h2>
-  </div>
-  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
-    <div class="gallery-grid">
-      <div class="gallery-item wide gallery-item-video" onclick="openVideoModal('V4QKjEP3M68')">
-        <img src="https://img.youtube.com/vi/V4QKjEP3M68/maxresdefault.jpg" alt="Fire in the Hole — Investigating Projectile Motion" loading="lazy" />
-        <div class="gallery-overlay"><span>Fire in the Hole — Investigating Projectile Motion</span></div>
-        <div class="gallery-play-btn"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-students-data-analysis.jpg', 'Authentic Learning Experience — Students process and analyse data they\'ve personally gathered to make sense of their observations.')">
-        <img src="images/gallery-students-data-analysis.jpg" alt="Student data analysis" loading="lazy" />
-        <div class="gallery-overlay"><span>Authentic Learning Experience — Students process and analyse data they've personally gathered to make sense of their observations.</span></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-lab-overview.jpg', '21st Century Classroom — Teacher as a facilitator of learning. Moving away from a teacher-centered approach.')">
-        <img src="images/gallery-lab-overview.jpg" alt="Physics lab" loading="lazy" />
-        <div class="gallery-overlay"><span>21st Century Classroom — Teacher as a facilitator of learning. Moving away from a teacher-centered approach.</span></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-teachers-pd-workshop.jpg', 'Lifelong Learner — IB Physics Cat. 2 Workshop, Sekolah Pelita Harapan, Indonesia')">
-        <img src="images/gallery-teachers-pd-workshop.jpg" alt="IB Workshop" loading="lazy" />
-        <div class="gallery-overlay"><span>Lifelong Learner — IB Physics Cat. 2 Workshop, Sekolah Pelita Harapan, Indonesia</span></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-students-sensor-experiment.jpg', 'ATL: Communication Skills — A student explains data interpretation to his group')">
-        <img src="images/gallery-students-sensor-experiment.jpg" alt="Sensor experiment" loading="lazy" />
-        <div class="gallery-overlay"><span>ATL: Communication Skills — A student explains data interpretation to his group</span></div>
-      </div>
-      <div class="gallery-item wide gallery-item-video" onclick="openVideoModal('SULFm_ZCdC0')">
-        <img src="images/gallery-ade-application-video.jpg" alt="Apple Distinguished Educator Application Video" loading="lazy" />
-        <div class="gallery-overlay"><span>Apple Distinguished Educator — Application Video</span></div>
-        <div class="gallery-play-btn"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-students-equations-paper.jpg', 'Learning for Understanding — Deriving SUVAT equations, not memorising them')">
-        <img src="images/gallery-students-equations-paper.jpg" alt="Working through equations" loading="lazy" />
-        <div class="gallery-overlay"><span>Learning for Understanding — Deriving SUVAT equations, not memorising them</span></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-students-physics-presentation.jpg', 'Integrating Technology — Making physics learning more efficient and effective')">
-        <img src="images/gallery-students-physics-presentation.jpg" alt="Student presentation" loading="lazy" />
-        <div class="gallery-overlay"><span>Integrating Technology — Making physics learning more efficient and effective</span></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-students-lab-experiment.jpg', 'Having Fun While Learning — The Physics of Angry Birds')">
-        <img src="images/gallery-students-lab-experiment.jpg" alt="Lab experiment" loading="lazy" />
-        <div class="gallery-overlay"><span>Having Fun While Learning — The Physics of Angry Birds</span></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-students-physics-lab-review.jpg', 'When Love and Hate Collide — Investigating elastic and inelastic collisions')">
-        <img src="images/gallery-students-physics-lab-review.jpg" alt="Physics lab review" loading="lazy" />
-        <div class="gallery-overlay"><span>When Love and Hate Collide — Investigating elastic and inelastic collisions</span></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-students-lab-laptops.jpg', 'Peer Learning — &quot;Learning with and from each other is a necessary aspect of all courses.&quot; (Boud, 2001)')">
-        <img src="images/gallery-students-lab-laptops.jpg" alt="Digital lab work" loading="lazy" />
-        <div class="gallery-overlay"><span>Peer Learning — "Learning with and from each other is a necessary aspect of all courses." (Boud, 2001)</span></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-students-collaborative-work.jpg', 'Communication and Collaboration — Working in groups to solve a common problem')">
-        <img src="images/gallery-students-collaborative-work.jpg" alt="Collaborative work" loading="lazy" />
-        <div class="gallery-overlay"><span>Communication and Collaboration — Working in groups to solve a common problem</span></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-student-tablet-lab.jpg', 'Self-Directed Learning — A student investigating relationships between variables she chose herself')">
-        <img src="images/gallery-student-tablet-lab.jpg" alt="Technology in the classroom" loading="lazy" />
-        <div class="gallery-overlay"><span>Self-Directed Learning — A student investigating relationships between variables she chose herself</span></div>
-      </div>
-      <div class="gallery-item" onclick="openImageModal('images/gallery-students-wave-experiment.jpg', 'Back to Basics — Keeping it simple and catering to kinesthetic learners')">
-        <img src="images/gallery-students-wave-experiment.jpg" alt="Wave experiment" loading="lazy" />
-        <div class="gallery-overlay"><span>Back to Basics — Keeping it simple and catering to kinesthetic learners</span></div>
-      </div>
+<section class="band" id="testimonials">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="kicker">What school leaders say</p>
+      <h2 class="h-section">Testimonials</h2>
+    </div>
+    <div class="quotes">
+      <figure class="quote quote-lead reveal">
+        <blockquote>Amin Bin Abu Bakar has been a great addition to our staff at ISNS. I can vouch for his content knowledge, professionalism, strength of character, and reputation amongst the staff as a friendly and caring individual.</blockquote>
+        <footer>
+          <img src="images/testimonial-patrick.jpg" alt="Patrick Boekhoud" loading="lazy" />
+          <div><div class="quote-name">Patrick Boekhoud</div><div class="quote-role">Former High School Principal, ISNS</div></div>
+          <a class="quote-more" href="documents/testimonial-patrick-boekhoud.pdf" target="_blank" rel="noopener">Full letter &nearr;</a>
+        </footer>
+      </figure>
+      <figure class="quote reveal">
+        <blockquote>The students are clearly working from the routines that you've established. This was a fun, engaging, and productive lesson. Loved that the students corrected others if they slipped into Mandarin. There was some great positive reinforcement that you gave students during the lesson.</blockquote>
+        <footer>
+          <img src="images/testimonial-chelsea.jpg" alt="Chelsea Donaldson" loading="lazy" />
+          <div><div class="quote-name">Chelsea Donaldson</div><div class="quote-role">High School Principal, ISNS</div></div>
+          <a class="quote-more" href="documents/testimonial-chelsea-donaldson.pdf" target="_blank" rel="noopener">Read &nearr;</a>
+        </footer>
+      </figure>
+      <figure class="quote reveal">
+        <blockquote>I heard 'this is awesome' and some students wanted to bring their data on their service learning trip to continue their investigation. The students were able to enjoy experiential learning and relate it to a topic they had already learned, reinforcing their learning in DP Physics.</blockquote>
+        <footer>
+          <img src="images/testimonial-brian.jpg" alt="Brian Kelly" loading="lazy" />
+          <div><div class="quote-name">Brian Kelly</div><div class="quote-role">Former High School Principal, ISNS</div></div>
+          <a class="quote-more" href="documents/testimonial-brian-kelly.pdf" target="_blank" rel="noopener">Read &nearr;</a>
+        </footer>
+      </figure>
+      <figure class="quote reveal">
+        <blockquote>You have a great classroom environment that you create for your students to openly engage with the content. It is clear that you have included a fair amount of rigor in the course through the activity in this class.</blockquote>
+        <footer>
+          <img src="images/testimonial-ernald.jpg" alt="Ernald Boyd" loading="lazy" />
+          <div><div class="quote-name">Ernald Boyd</div><div class="quote-role">MYP Coordinator, ISNS</div></div>
+          <a class="quote-more" href="documents/testimonial-ernald-boyd.pdf" target="_blank" rel="noopener">Read &nearr;</a>
+        </footer>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="section-inner">
-    <p class="section-label">What Others Say</p>
-    <h2 class="section-title">Testimonials</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <p class="testimonial-quote">"The students are clearly working from the routines that you've established. This was a fun, engaging, and productive lesson. Loved that the students corrected others if they slipped into Mandarin. There was some great positive reinforcement that you gave students during the lesson."</p>
-        <div class="testimonial-footer">
-          <img class="testimonial-avatar" src="images/testimonial-chelsea.jpg" alt="Chelsea Donaldson" />
-          <div class="testimonial-author-info">
-            <div class="testimonial-author">Chelsea Donaldson</div>
-            <div class="testimonial-role">High School Principal, ISNS</div>
-            <a class="testimonial-link" href="documents/testimonial-chelsea-donaldson.pdf" target="_blank">Learn more</a>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-quote">"I heard 'this is awesome' and some students wanted to bring their data on their service learning trip to continue their investigation. The students were able to enjoy experiential learning and relate it to a topic they had already learned, reinforcing their learning in DP Physics."</p>
-        <div class="testimonial-footer">
-          <img class="testimonial-avatar" src="images/testimonial-brian.jpg" alt="Brian Kelly" />
-          <div class="testimonial-author-info">
-            <div class="testimonial-author">Brian Kelly</div>
-            <div class="testimonial-role">Former High School Principal, ISNS</div>
-            <a class="testimonial-link" href="documents/testimonial-brian-kelly.pdf" target="_blank">Learn more</a>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-quote">"Amin Bin Abu Bakar has been a great addition to our staff at ISNS. I can vouch for his content knowledge, professionalism, strength of character, and reputation amongst the staff as a friendly and caring individual."</p>
-        <div class="testimonial-footer">
-          <img class="testimonial-avatar" src="images/testimonial-patrick.jpg" alt="Patrick Boekhoud" />
-          <div class="testimonial-author-info">
-            <div class="testimonial-author">Patrick Boekhoud</div>
-            <div class="testimonial-role">Former High School Principal, ISNS</div>
-            <a class="testimonial-link" href="documents/testimonial-patrick-boekhoud.pdf" target="_blank">Learn more</a>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-quote">"You have a great classroom environment that you create for your students to openly engage with the content. It is clear that you have included a fair amount of rigor in the course through the activity in this class."</p>
-        <div class="testimonial-footer">
-          <img class="testimonial-avatar" src="images/testimonial-ernald.jpg" alt="Ernald Boyd" />
-          <div class="testimonial-author-info">
-            <div class="testimonial-author">Ernald Boyd</div>
-            <div class="testimonial-role">MYP Coordinator, ISNS</div>
-            <a class="testimonial-link" href="documents/testimonial-ernald-boyd.pdf" target="_blank">Learn more</a>
-          </div>
-        </div>
-      </div>
+<section class="band on-ink" id="deeper-dive">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="kicker">Go deeper</p>
+      <h2 class="h-section">Beyond the highlights</h2>
     </div>
-  </div>
-</section>
-
-<!-- DEEPER DIVE -->
-<section id="deeper-dive">
-  <div class="section-inner">
-    <p class="section-label">Go Deeper</p>
-    <h2 class="section-title">Beyond the Highlights</h2>
-    <div class="dive-grid">
-      <a class="dive-card" href="goals.html">
-        <span class="dive-card-label">Annual Goals</span>
-        <span class="dive-card-title">Goals</span>
-        <span class="dive-card-desc">Five years of professional and personal goals — from inquiry-based teaching to presenting at the IB Global Conference and pursuing a doctorate.</span>
-        <span class="dive-card-arrow">→</span>
+    <div class="dive reveal">
+      <a href="moments.html">
+        <span class="dive-num">01</span>
+        <span class="dive-title">Moments</span>
+        <span class="dive-desc">Photos and video from the lab and from workshops: projectile launches, collision carts, SUVAT derivations, and students leading their own inquiry.</span>
+        <span class="dive-go">Open the gallery <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a>
-      <a class="dive-card" href="evaluation.html">
-        <span class="dive-card-label">Growth &amp; Practice</span>
-        <span class="dive-card-title">Reflections</span>
-        <span class="dive-card-desc">Annual evaluations using the IB Standards &amp; Practices Framework — documenting what worked, what grew, and what continues to drive my teaching.</span>
-        <span class="dive-card-arrow">→</span>
+      <a href="goals.html">
+        <span class="dive-num">02</span>
+        <span class="dive-title">Goals</span>
+        <span class="dive-desc">Annual professional and personal goals since 2021, from inquiry-based teaching to presenting at the IB Global Conference and pursuing a doctorate.</span>
+        <span class="dive-go">Read the goals <span class="arrow" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="evaluation.html">
+        <span class="dive-num">03</span>
+        <span class="dive-title">Reflections</span>
+        <span class="dive-desc">Annual evaluations using the IB Standards &amp; Practices Framework, documenting what worked, what grew, and what continues to drive my teaching.</span>
+        <span class="dive-go">Read the reflections <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a>
     </div>
   </div>
 </section>
+</main>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-inner">
-    <p class="section-label" style="color:#666;">Get In Touch</p>
-    <h2 class="section-title">Contact</h2>
-    <div class="contact-links">
-      <a class="contact-link" href="mailto:aminurrashidabubakar@gmail.com">
-        <span class="contact-link-label">Email</span>
-        <span class="contact-link-value">aminurrashidabubakar@gmail.com</span>
-      </a>
-      <a class="contact-link" href="https://www.linkedin.com/in/aminabubakar/" target="_blank">
-        <span class="contact-link-label">LinkedIn</span>
-        <span class="contact-link-value">linkedin.com/in/aminabubakar</span>
-      </a>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-row">
+      <span class="footer-place">Shenzhen, Guangdong, China</span>
+      <ul class="footer-links">
+        <li><a href="mailto:aminurrashidabubakar@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/aminabubakar/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/aminabubakar" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
     </div>
-    <p class="contact-location">Shenzhen, Guangdong, China</p>
+    <p class="footer-legal">&copy; 2026 Amin Abu Bakar. All rights reserved.</p>
   </div>
-</section>
+</footer>
 
-<footer>&copy; 2026 Amin Abu Bakar. All rights reserved.</footer>
-
-<div class="image-modal" id="imageModal" onclick="handleImageModalClick(event)">
-  <div class="image-modal-inner">
-    <button class="image-modal-close" onclick="closeImageModal()">&times;</button>
-    <img id="imageModalImg" src="" alt="" />
-    <div class="image-modal-caption" id="imageModalCaption"></div>
-  </div>
-</div>
-
-<div class="video-modal" id="videoModal" onclick="handleModalClick(event)">
-  <div class="video-modal-inner">
-    <button class="video-modal-close" onclick="closeVideoModal()">&times;</button>
-    <iframe id="videoFrame" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-  </div>
-</div>
-
-<script>
-  function openVideoModal(videoId) {
-    document.getElementById('videoFrame').src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
-    document.getElementById('videoModal').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeVideoModal() {
-    document.getElementById('videoFrame').src = '';
-    document.getElementById('videoModal').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function handleModalClick(e) {
-    if (e.target === document.getElementById('videoModal')) closeVideoModal();
-  }
-  function openImageModal(src, caption) {
-    document.getElementById('imageModalImg').src = src;
-    document.getElementById('imageModalCaption').textContent = caption;
-    document.getElementById('imageModal').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeImageModal() {
-    document.getElementById('imageModalImg').src = '';
-    document.getElementById('imageModal').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function handleImageModalClick(e) {
-    if (e.target === document.getElementById('imageModal')) closeImageModal();
-  }
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeVideoModal(); closeImageModal(); } });
-
-  const toggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  toggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>

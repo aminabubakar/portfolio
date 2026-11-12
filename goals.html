@@ -1,133 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Goals — Amin Abu Bakar</title>
+  <title>Goals | Dr. Amin Abu Bakar</title>
   <meta name="description" content="Annual Professional Learning Community goals documenting Amin Abu Bakar's growth as an IB educator, workshop leader, and researcher." />
+  <meta name="theme-color" content="#0a0d12" />
   <link rel="canonical" href="https://aminabubakar.com/goals.html" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --black: #0d0d0d; --white: #ffffff;
-      --gray-100: #f5f5f5; --gray-200: #e8e8e8;
-      --gray-400: #999; --gray-600: #555; --gray-800: #222;
-      --serif: 'Playfair Display', Georgia, serif;
-      --sans: 'Inter', system-ui, sans-serif;
-      --max-w: 860px;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 60px; }
-    .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--black); text-decoration: none; }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--black); }
-    .nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; margin-left: auto; }
-    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
-    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    /* PAGE HEADER */
-    .page-header {
-      padding: 140px 24px 80px;
-      background: var(--black);
-      color: var(--white);
-      text-align: center;
-    }
-    .page-header .eyebrow { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
-    .page-header h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; margin-bottom: 20px; }
-    .page-header p { font-size: 1rem; color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto; }
-
-    /* CONTENT */
-    .content { max-width: var(--max-w); margin: 0 auto; padding: 80px 24px; }
-
-    .year-block { margin-bottom: 72px; }
-    .year-block:last-child { margin-bottom: 0; }
-
-    .year-label {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      background: var(--black);
-      color: var(--white);
-      padding: 5px 14px;
-      margin-bottom: 32px;
-    }
-
-    .goal { padding: 32px 0; border-top: 1px solid var(--gray-200); }
-    .goal:last-child { border-bottom: 1px solid var(--gray-200); }
-
-    .goal-number {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gray-400);
-      margin-bottom: 8px;
-    }
-
-    .goal-title {
-      font-family: var(--serif);
-      font-size: 1.25rem;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 12px;
-    }
-
-    .goal-desc {
-      font-size: 0.93rem;
-      color: var(--gray-600);
-      line-height: 1.75;
-      margin-bottom: 20px;
-    }
-
-    .goal-links { display: flex; flex-direction: column; gap: 8px; }
-    .goal-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.82rem;
-      color: var(--black);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gray-200);
-      padding-bottom: 2px;
-      width: fit-content;
-      transition: border-color 0.2s;
-    }
-    .goal-link:hover { border-color: var(--black); }
-    .goal-link::before { content: '↗'; font-size: 0.75rem; color: var(--gray-400); }
-
-    footer { background: var(--black); border-top: 1px solid rgba(255,255,255,0.08); text-align: center; padding: 24px; font-size: 0.75rem; color: #444; }
-
-    @media (max-width: 720px) {
-      nav { padding: 0 16px; }
-      .nav-toggle { display: flex; }
-      .nav-links {
-        display: none;
-        position: fixed;
-        top: 60px; left: 0; right: 0;
-        background: var(--white);
-        border-bottom: 1px solid var(--gray-200);
-        flex-direction: column;
-        padding: 12px 20px 20px;
-        gap: 0;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      }
-      .nav-links.open { display: flex; }
-      .nav-links li { border-bottom: 1px solid var(--gray-200); }
-      .nav-links li:last-child { border-bottom: none; }
-      .nav-links a { display: block; padding: 14px 0; font-size: 0.82rem; letter-spacing: 0.1em; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+  <!-- Tailwind (CDN) for utility classes. Tokens and components live in css/site.css. -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.tailwind) return;
+      tailwind.config = {
+        theme: { extend: {
+          fontFamily: { display: ['Space Grotesk', 'Inter', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+          colors: { ink: '#0a0d12', paper: '#fafaf7', signal: '#4fd1c5' }
+        } }
+      };
+    });
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5S4Q15B5RE"></script>
   <script>
@@ -139,33 +36,50 @@
 </head>
 <body>
 
-<nav>
-  <a class="nav-name" href="index.html">Amin Abu Bakar</a>
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#experience">Experience</a></li>
-    <li><a href="index.html#education">Education</a></li>
-    <li><a href="index.html#certifications">Certifications</a></li>
-    <li><a href="index.html#gallery">Moments</a></li>
-    <li><a href="goals.html" class="active">Goals</a></li>
-    <li><a href="evaluation.html">Reflections</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
-</nav>
+<a class="skip" href="#main">Skip to content</a>
 
-<div class="page-header">
-  <h1>Goals</h1>
-  <p>Annual professional goals documenting my growth as an educator, IB leader, and researcher.</p>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Amin Abu Bakar <span class="brand-tag">Ed.D.</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="moments.html">Moments</a></li>
+        <li><a href="goals.html" aria-current="page">Goals</a></li>
+        <li><a href="evaluation.html">Reflections</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="page-head on-ink">
+  <div class="wrap">
+    <p class="kicker">Annual goals</p>
+    <h1 class="h-display">Goals</h1>
+    <p class="lede">Annual professional goals documenting my growth as an educator, IB leader, and researcher.</p>
+  </div>
 </div>
 
-<div class="content">
+<div class="wrap doc">
+  <aside class="rail" aria-label="Jump to a school year">
+    <p class="rail-title">School year</p>
+    <ol>
+        <li><a href="#y2026-2027">2026–2027</a></li>
+        <li><a href="#y2025-2026">2025–2026</a></li>
+        <li><a href="#y2024-2025">2024–2025</a></li>
+        <li><a href="#y2023-2024">2023–2024</a></li>
+        <li><a href="#y2022-2023">2022–2023</a></li>
+        <li><a href="#y2021-2022">2021–2022</a></li>
+    </ol>
+  </aside>
+  <div class="doc-col">
+    <details class="acc" id="y2026-2027" open>
+      <summary><span class="acc-year">2026 – 2027</span><span class="acc-count">2 goals</span><span class="acc-icon" aria-hidden="true"></span></summary>
+      <div class="acc-body">
 
-  <!-- 2026–2027 -->
-  <div class="year-block">
-    <div class="year-label">2026 – 2027</div>
 
     <div class="goal-links" style="margin-bottom: 32px;">
       <a class="goal-link" href="documents/goals-professional-growth-2627.pdf" target="_blank">2026–2027 Professional Growth Goals Form</a>
@@ -191,11 +105,12 @@
         <a class="goal-link" href="documents/goals-physics-cat1-reflections-2026.pdf" target="_blank">DP Physics Cat. 1 Workshop — Final Reflections</a>
       </div>
     </div>
-  </div>
+      </div>
+    </details>
+    <details class="acc" id="y2025-2026">
+      <summary><span class="acc-year">2025 – 2026</span><span class="acc-count">2 goals</span><span class="acc-icon" aria-hidden="true"></span></summary>
+      <div class="acc-body">
 
-  <!-- 2025–2026 -->
-  <div class="year-block">
-    <div class="year-label">2025 – 2026</div>
 
     <div class="goal">
       <div class="goal-number">Goal 1 — Professional</div>
@@ -218,11 +133,12 @@
         <a class="goal-link" href="documents/goals-smart-2526.pdf" target="_blank">2025–2026 SMART Goals Document</a>
       </div>
     </div>
-  </div>
+      </div>
+    </details>
+    <details class="acc" id="y2024-2025">
+      <summary><span class="acc-year">2024 – 2025</span><span class="acc-count">2 goals</span><span class="acc-icon" aria-hidden="true"></span></summary>
+      <div class="acc-body">
 
-  <!-- 2024–2025 -->
-  <div class="year-block">
-    <div class="year-label">2024 – 2025</div>
 
     <div class="goal">
       <div class="goal-number">Goal 1</div>
@@ -242,11 +158,12 @@
         <a class="goal-link" href="documents/goals-edtechgz-poster-2526.pdf" target="_blank">EdTechGZ Presenter Poster</a>
       </div>
     </div>
-  </div>
+      </div>
+    </details>
+    <details class="acc" id="y2023-2024">
+      <summary><span class="acc-year">2023 – 2024</span><span class="acc-count">3 goals</span><span class="acc-icon" aria-hidden="true"></span></summary>
+      <div class="acc-body">
 
-  <!-- 2023–2024 -->
-  <div class="year-block">
-    <div class="year-label">2023 – 2024</div>
 
     <div class="goal">
       <div class="goal-number">Goal 1</div>
@@ -274,11 +191,12 @@
         <a class="goal-link" href="documents/goals-ai-guidelines-myp-science.pdf" target="_blank">AI Guidelines for MYP Science Year 5 — Criterion C Task</a>
       </div>
     </div>
-  </div>
+      </div>
+    </details>
+    <details class="acc" id="y2022-2023">
+      <summary><span class="acc-year">2022 – 2023</span><span class="acc-count">2 goals</span><span class="acc-icon" aria-hidden="true"></span></summary>
+      <div class="acc-body">
 
-  <!-- 2022–2023 -->
-  <div class="year-block">
-    <div class="year-label">2022 – 2023</div>
 
     <div class="goal">
       <div class="goal-number">Goal 1</div>
@@ -297,11 +215,12 @@
         <a class="goal-link" href="documents/goals-cern-letter.pdf" target="_blank">CERN Confirmation Letter</a>
       </div>
     </div>
-  </div>
+      </div>
+    </details>
+    <details class="acc" id="y2021-2022">
+      <summary><span class="acc-year">2021 – 2022</span><span class="acc-count">2 goals</span><span class="acc-icon" aria-hidden="true"></span></summary>
+      <div class="acc-body">
 
-  <!-- 2021–2022 -->
-  <div class="year-block">
-    <div class="year-label">2021 – 2022</div>
 
     <div class="goal">
       <div class="goal-number">Goal 1</div>
@@ -317,27 +236,26 @@
       <div class="goal-title">Pursue a Doctorate in Education</div>
       <p class="goal-desc">After completing a Master of Advanced Teaching at the University of the People with a 4.0 GPA, committed to taking the next step in the academic journey by pursuing a Doctor of Education — now completed.</p>
     </div>
+      </div>
+    </details>
   </div>
-
 </div>
+</main>
 
-<footer>&copy; 2026 Amin Abu Bakar. All rights reserved.</footer>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-row">
+      <span class="footer-place">Shenzhen, Guangdong, China</span>
+      <ul class="footer-links">
+        <li><a href="mailto:aminurrashidabubakar@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/aminabubakar/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/aminabubakar" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+    <p class="footer-legal">&copy; 2026 Amin Abu Bakar. All rights reserved.</p>
+  </div>
+</footer>
 
-<script>
-  const toggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  toggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>
