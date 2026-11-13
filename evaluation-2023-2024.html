@@ -8,9 +8,8 @@
   <meta name="theme-color" content="#0a0d12" />
   <link rel="canonical" href="https://aminabubakar.com/evaluation-2023-2024.html" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/site.css" />
   <!-- Tailwind (CDN) for utility classes. Tokens and components live in css/site.css. -->
   <script src="https://cdn.tailwindcss.com" defer></script>
@@ -19,7 +18,7 @@
       if (!window.tailwind) return;
       tailwind.config = {
         theme: { extend: {
-          fontFamily: { display: ['Space Grotesk', 'Inter', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+          fontFamily: { display: ['Newsreader', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
           colors: { ink: '#0a0d12', paper: '#fafaf7', signal: '#4fd1c5' }
         } }
       };

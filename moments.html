@@ -8,9 +8,8 @@
   <meta name="theme-color" content="#0a0d12" />
   <link rel="canonical" href="https://aminabubakar.com/moments.html" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/site.css" />
   <!-- Tailwind (CDN) for utility classes. Tokens and components live in css/site.css. -->
   <script src="https://cdn.tailwindcss.com" defer></script>
@@ -19,7 +18,7 @@
       if (!window.tailwind) return;
       tailwind.config = {
         theme: { extend: {
-          fontFamily: { display: ['Space Grotesk', 'Inter', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+          fontFamily: { display: ['Newsreader', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
           colors: { ink: '#0a0d12', paper: '#fafaf7', signal: '#4fd1c5' }
         } }
       };
@@ -128,12 +127,12 @@
     </figure>
     <figure class="shot reveal" data-cat="workshops">
       <button type="button" class="shot-media" data-lightbox aria-label="Enlarge: Extended Essay Workshop">
-        <img src="images/eval-ee-workshop-korea.jpg" alt="Extended Essay workshop at Chadwick International School" loading="lazy" />
+        <img src="images/eval-ee-workshop-korea.jpg" alt="Extended Essay workshop at Chadwick International School, Incheon" loading="lazy" />
       </button>
       <figcaption>
         <p class="shot-cat">Workshops</p>
         <h3>Extended Essay Workshop</h3>
-        <div class="shot-cap"><p>Leading an Extended Essay workshop for teachers at Chadwick International School in Korea.</p></div>
+        <div class="shot-cap"><p>Leading an Extended Essay workshop for teachers at Chadwick International School in Incheon, Korea.</p></div>
       </figcaption>
     </figure>
     <figure class="shot wide reveal" data-cat="ai">
