@@ -194,7 +194,7 @@
           var len = 5 + 7 * strength + 4 * near;
           var alpha = 0.07 + 0.2 * strength + 0.5 * near;
           ctx.strokeStyle = near > 0.02
-            ? 'rgba(79,209,197,' + alpha.toFixed(3) + ')'
+            ? 'rgba(232,146,111,' + alpha.toFixed(3) + ')'
             : 'rgba(214,222,232,' + alpha.toFixed(3) + ')';
           ctx.lineWidth = 1 + 0.6 * near;
           ctx.beginPath();
