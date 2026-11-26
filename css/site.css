@@ -22,9 +22,9 @@
 
 :root {
   /* surfaces */
-  --ink: #0a0d12;
-  --ink-2: #10151c;
-  --ink-3: #18202a;
+  --ink: #1d2b47;
+  --ink-2: #24365a;
+  --ink-3: #2d4270;
   --paper: #fafaf7;
   --paper-2: #f1f0ea;
   --card: #ffffff;
@@ -42,8 +42,8 @@
   --line-ink: rgba(255, 255, 255, 0.1);
 
   /* accent */
-  --signal: #4fd1c5;
-  --signal-ink: #0b6b63;
+  --signal: #e8926f;
+  --signal-ink: #a8472d;
 
   /* type */
   --display: 'Newsreader', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
@@ -97,7 +97,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .site-nav {
   position: fixed; inset: 0 0 auto 0; z-index: 100;
   height: var(--nav-h);
-  background: rgba(10, 13, 18, 0.78);
+  background: rgba(29, 43, 71, 0.78);
   -webkit-backdrop-filter: saturate(160%) blur(16px);
   backdrop-filter: saturate(160%) blur(16px);
   border-bottom: 1px solid var(--line-ink);
@@ -105,7 +105,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 .site-nav .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: baseline; gap: 10px; font-family: var(--display); font-weight: 600; font-size: 1.2rem; letter-spacing: 0; white-space: nowrap; }
-.brand-tag { font-family: var(--mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.08em; color: var(--signal); border: 1px solid rgba(79, 209, 197, 0.35); border-radius: 3px; padding: 1px 6px; transform: translateY(-1px); }
+.brand-tag { font-family: var(--mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.08em; color: var(--signal); border: 1px solid rgba(232, 146, 111, 0.35); border-radius: 3px; padding: 1px 6px; transform: translateY(-1px); }
 .nav-links { display: flex; align-items: center; gap: 4px; }
 .nav-links a {
   position: relative; display: block; padding: 8px 14px;
@@ -186,7 +186,7 @@ a:hover > .arrow, .btn:hover .arrow { transform: translateX(4px); }
 /* ---------- hero (index) ---------- */
 .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; background: var(--ink); color: var(--on-ink); padding: calc(var(--nav-h) + 72px) 0 72px; }
 .hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.hero::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 90% at 20% 100%, rgba(10, 13, 18, 0.92) 0%, rgba(10, 13, 18, 0.55) 45%, rgba(10, 13, 18, 0) 75%); }
+.hero::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 90% at 20% 100%, rgba(29, 43, 71, 0.92) 0%, rgba(29, 43, 71, 0.55) 45%, rgba(29, 43, 71, 0) 75%); }
 .hero .wrap { position: relative; z-index: 1; }
 .hero-coords { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-ink-faint); margin-bottom: 28px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .hero-coords b { font-weight: 500; color: var(--signal); }
@@ -423,7 +423,7 @@ a:hover > .arrow, .btn:hover .arrow { transform: translateX(4px); }
 .shot.wide .shot-media { aspect-ratio: 16 / 9; }
 .shot-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .shot-media:hover img { transform: scale(1.035); }
-.shot-play { position: absolute; left: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 10px; background: rgba(10, 13, 18, 0.78); color: var(--on-ink); font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 9px 14px 9px 12px; border-radius: 999px; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.shot-play { position: absolute; left: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 10px; background: rgba(29, 43, 71, 0.78); color: var(--on-ink); font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 9px 14px 9px 12px; border-radius: 999px; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 .shot-play::before { content: ''; border-style: solid; border-width: 5px 0 5px 8px; border-color: transparent transparent transparent var(--signal); }
 .shot-cat { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--signal-ink); margin: 16px 0 6px; }
 .shot h3 { font-family: var(--display); font-size: 1.35rem; font-weight: 500; letter-spacing: 0; line-height: 1.25; margin-bottom: 8px; }
